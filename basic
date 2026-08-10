@@ -1,5 +1,4 @@
-int age = 20;
-String name = "Kedareshwari";
-double price = 99.5;
-char grade = 'A';
-boolean passed = true;
+Scanner sc = new Scanner(System.in);
+
+int n = sc.nextInt();
+String name = sc.next();
