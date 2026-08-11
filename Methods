@@ -1,4 +1,4 @@
-static void hello() {
-    System.out.println("Hello");
+static void add(int a, int b) {
+    System.out.println(a + b);
 }
-hello();
+add(10, 20);
