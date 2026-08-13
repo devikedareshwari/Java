@@ -1,11 +1,11 @@
-class Student {
-    private int age;
-
-    public void setAge(int age) {
-        this.age = age;
+class Animal {
+    void eat() {
+        System.out.println("Eating");
     }
+}
 
-    public int getAge() {
-        return age;
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking");
     }
 }
