@@ -1,4 +1,9 @@
-Student s = new Student();
+class Student {
+    String name;
+    int age;
 
-s.name = "Rahul";
-s.age = 20;
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
