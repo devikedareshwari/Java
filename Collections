@@ -1,7 +1,6 @@
-HashSet<Integer> set = new HashSet<>();
+HashMap<String, Integer> map = new HashMap<>();
 
-set.add(10);
-set.add(20);
-set.add(10);
+map.put("Apple", 10);
+map.put("Banana", 20);
 
-System.out.println(set);
+System.out.println(map.get("Apple"));
