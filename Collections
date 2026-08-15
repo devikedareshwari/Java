@@ -1,6 +1,6 @@
-Stack<Integer> stack = new Stack<>();
+Queue<Integer> q = new LinkedList<>();
 
-stack.push(10);
-stack.push(20);
+q.add(10);
+q.add(20);
 
-System.out.println(stack.pop());
+System.out.println(q.poll());
