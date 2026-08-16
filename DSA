@@ -1,10 +1,12 @@
-int sum = 0;
+int low = 1;
+int high = 100;
 
-for (int i = 0; i < k; i++) {
-    sum += arr[i];
-}
+while (low <= high) {
+    int mid = (low + high) / 2;
 
-for (int i = k; i < arr.length; i++) {
-    sum += arr[i];
-    sum -= arr[i - k];
+    if (isPossible(mid)) {
+        high = mid - 1;
+    } else {
+        low = mid + 1;
+    }
 }
