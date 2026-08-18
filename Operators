@@ -1,7 +1,14 @@
-int x = 5;
+int day = 2;
 
-x++;
-System.out.println(x);
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
 
-x--;
-System.out.println(x);
+    case 2:
+        System.out.println("Tuesday");
+        break;
+
+    default:
+        System.out.println("Invalid");
+}
