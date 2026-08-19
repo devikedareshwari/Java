@@ -1,7 +1,9 @@
-for (int i = 0; i < matrix.length; i++) {
-    for (int j = 0; j < matrix[i].length; j++) {
-        System.out.print(matrix[i][j] + " ");
+static int sum(int... numbers) {
+    int total = 0;
+
+    for (int x : numbers) {
+        total += x;
     }
 
-    System.out.println();
+    return total;
 }
