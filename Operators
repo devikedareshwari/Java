@@ -1,3 +1,5 @@
-sb.reverse();
+StringBuffer sb = new StringBuffer("Java");
+
+sb.append(" Programming");
 
 System.out.println(sb);
