@@ -1,5 +1,6 @@
-static void checkAge(int age) {
-    if (age < 18) {
-        throw new IllegalArgumentException("Not eligible");
+class MyException extends Exception {
+
+    MyException(String message) {
+        super(message);
     }
 }
