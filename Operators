@@ -1,8 +1,6 @@
-abstract class Animal {
+class Dog extends Animal {
 
-    abstract void sound();
-
-    void eat() {
-        System.out.println("Eating");
+    void sound() {
+        System.out.println("Bark");
     }
 }
