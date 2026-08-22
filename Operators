@@ -1,8 +1,3 @@
-class Test {
-
-    static int count = 0;
-
-    Test() {
-        count++;
-    }
+final void display() {
+    System.out.println("Hello");
 }
