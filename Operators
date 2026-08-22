@@ -1,6 +1,8 @@
-class Dog extends Animal {
+class Test {
 
-    void sound() {
-        System.out.println("Bark");
+    static int count = 0;
+
+    Test() {
+        count++;
     }
 }
