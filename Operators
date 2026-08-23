@@ -1,3 +1,5 @@
-final void display() {
-    System.out.println("Hello");
+enum Day {
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY
 }
