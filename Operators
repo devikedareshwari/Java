@@ -1,12 +1,1 @@
-class Student implements Comparable<Student> {
-
-    int marks;
-
-    Student(int marks) {
-        this.marks = marks;
-    }
-
-    public int compareTo(Student other) {
-        return this.marks - other.marks;
-    }
-}
+Arrays.sort(arr, (a, b) -> a - b);
