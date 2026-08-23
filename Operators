@@ -1,12 +1,12 @@
-class Box<T> {
+class Student implements Comparable<Student> {
 
-    T value;
+    int marks;
 
-    Box(T value) {
-        this.value = value;
+    Student(int marks) {
+        this.marks = marks;
     }
 
-    T getValue() {
-        return value;
+    public int compareTo(Student other) {
+        return this.marks - other.marks;
     }
 }
