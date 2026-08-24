@@ -1,5 +1,6 @@
-List<Integer> list = Arrays.asList(1, 2, 3);
+List<Integer> list = Arrays.asList(1, 2, 3, 4);
 
-list.stream()
-    .map(x -> x * 2)
-    .forEach(System.out::println);
+int sum = list.stream()
+              .reduce(0, (a, b) -> a + b);
+
+System.out.println(sum);
