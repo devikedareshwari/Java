@@ -1,7 +1,3 @@
-Runnable task = () -> {
-    System.out.println("Task running");
-};
-
-Thread t = new Thread(task);
-
-t.start();
+synchronized void increment() {
+    count++;
+}
