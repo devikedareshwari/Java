@@ -1,6 +1,7 @@
-class MyThread extends Thread {
+Runnable task = () -> {
+    System.out.println("Task running");
+};
 
-    public void run() {
-        System.out.println("Thread running");
-    }
-}
+Thread t = new Thread(task);
+
+t.start();
