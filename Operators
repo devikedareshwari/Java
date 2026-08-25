@@ -1,6 +1,5 @@
-List<Integer> list = Arrays.asList(1, 2, 3, 4);
+FileWriter writer = new FileWriter("data.txt");
 
-int sum = list.stream()
-              .reduce(0, (a, b) -> a + b);
+writer.write("Hello Java");
 
-System.out.println(sum);
+writer.close();
