@@ -1,5 +1,6 @@
-FileWriter writer = new FileWriter("data.txt");
+class MyThread extends Thread {
 
-writer.write("Hello Java");
-
-writer.close();
+    public void run() {
+        System.out.println("Thread running");
+    }
+}
