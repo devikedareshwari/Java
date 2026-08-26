@@ -1,2 +1,8 @@
-record Student(String name, int age) {
+class Outer {
+
+    class Inner {
+        void display() {
+            System.out.println("Inner class");
+        }
+    }
 }
