@@ -1,6 +1,1 @@
-Animal a = new Animal() {
-
-    void sound() {
-        System.out.println("Unknown sound");
-    }
-};
+package mypackage;
