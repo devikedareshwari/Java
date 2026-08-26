@@ -1,8 +1,6 @@
-class Outer {
+Animal a = new Animal() {
 
-    class Inner {
-        void display() {
-            System.out.println("Inner class");
-        }
+    void sound() {
+        System.out.println("Unknown sound");
     }
-}
+};
