@@ -1,3 +1,2 @@
-Optional<String> name = Optional.of("Java");
-
-System.out.println(name.orElse("Unknown"));
+record Student(String name, int age) {
+}
