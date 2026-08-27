@@ -1,3 +1,4 @@
-Statement stmt = con.createStatement();
-
-ResultSet rs = stmt.executeQuery("SELECT * FROM students");
+@GetMapping("/students")
+public List<Student> getStudents() {
+    return students;
+}
