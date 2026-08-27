@@ -1,1 +1,5 @@
-package mypackage;
+Connection con = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/test",
+    "root",
+    "password"
+);
