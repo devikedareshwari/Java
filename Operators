@@ -1,4 +1,4 @@
-@GetMapping("/students")
-public List<Student> getStudents() {
-    return students;
+@Service
+class StudentService {
+
 }
