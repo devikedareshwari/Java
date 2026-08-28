@@ -1,4 +1,4 @@
-@Service
-class StudentService {
+int a = 10;
+double b = a;
 
-}
+System.out.println(b);
