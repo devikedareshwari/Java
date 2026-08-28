@@ -1,4 +1,5 @@
-double a = 10.5;
-int b = (int) a;
+Object obj = "Java";
 
-System.out.println(b);
+if (obj instanceof String) {
+    System.out.println("It is a String");
+}
