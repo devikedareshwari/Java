@@ -1,7 +1,6 @@
-class Student {
-    int marks;
-}
+Student s = new Student();
+s.marks = 50;
 
-static void update(Student s) {
-    s.marks = 90;
-}
+update(s);
+
+System.out.println(s.marks);
