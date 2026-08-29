@@ -1,5 +1,9 @@
-Animal a = new Dog();
+static void change(int x) {
+    x = 100;
+}
 
-Dog d = (Dog) a;
+int a = 10;
 
-d.bark();
+change(a);
+
+System.out.println(a);
