@@ -1,14 +1,5 @@
-class Animal {
-    void sound() {
-        System.out.println("Animal sound");
-    }
-}
-
-class Dog extends Animal {
-    void bark() {
-        System.out.println("Bark");
-    }
-}
-
 Animal a = new Dog();
-a.sound();
+
+Dog d = (Dog) a;
+
+d.bark();
