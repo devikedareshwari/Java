@@ -1,9 +1,7 @@
-static void change(int x) {
-    x = 100;
+class Student {
+    int marks;
 }
 
-int a = 10;
-
-change(a);
-
-System.out.println(a);
+static void update(Student s) {
+    s.marks = 90;
+}
