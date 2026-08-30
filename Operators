@@ -1,3 +1,8 @@
-String s = "Java";
+class Student {
+    String name;
+    int age;
 
-System.out.println(s.hashCode());
+    public String toString() {
+        return name + " " + age;
+    }
+}
