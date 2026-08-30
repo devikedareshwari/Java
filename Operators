@@ -1,6 +1,4 @@
-Student s = new Student();
-s.marks = 50;
+String a = new String("Java");
+String b = new String("Java");
 
-update(s);
-
-System.out.println(s.marks);
+System.out.println(a == b);
