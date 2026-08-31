@@ -1,5 +1,18 @@
-String s = "Java";
+final class Student {
 
-s.concat(" Programming");
+    private final String name;
+    private final int age;
 
-System.out.println(s);
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
