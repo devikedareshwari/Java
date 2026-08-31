@@ -1,8 +1,6 @@
-class Student {
-    String name;
-    int age;
+Student s = new Student();
 
-    public String toString() {
-        return name + " " + age;
-    }
-}
+s.name = "Rahul";
+s.age = 20;
+
+System.out.println(s);
