@@ -1,3 +1,4 @@
-int[] arr = {5, 2, 8, 1};
-
-Arrays.sort(arr);
+Arrays.fill(arr, 0);
+Arrays.copyOf(arr, 10);
+Arrays.equals(arr1, arr2);
+Arrays.binarySearch(arr, 5);
