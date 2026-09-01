@@ -1,1 +1,4 @@
-Student s2 = s1;
+Student(Student other) {
+    this.name = other.name;
+    this.age = other.age;
+}
