@@ -1,4 +1,8 @@
-Student(Student other) {
-    this.name = other.name;
-    this.age = other.age;
+class Student implements Cloneable {
+
+    int age;
+
+    public Student clone() throws CloneNotSupportedException {
+        return (Student) super.clone();
+    }
 }
