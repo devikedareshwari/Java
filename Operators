@@ -1,4 +1,6 @@
-Collections.reverse(list);
-Collections.max(list);
-Collections.min(list);
-Collections.frequency(list, 10);
+LinkedList<Integer> list = new LinkedList<>();
+
+list.addFirst(10);
+list.addLast(20);
+
+System.out.println(list);
