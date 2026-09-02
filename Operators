@@ -1,9 +1,4 @@
-List<Integer> list = new ArrayList<>();
-
-list.add(30);
-list.add(10);
-list.add(20);
-
-Collections.sort(list);
-
-System.out.println(list);
+Collections.reverse(list);
+Collections.max(list);
+Collections.min(list);
+Collections.frequency(list, 10);
