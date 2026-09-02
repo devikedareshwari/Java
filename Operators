@@ -1,6 +1,7 @@
-LinkedList<Integer> list = new LinkedList<>();
+Deque<Integer> dq = new ArrayDeque<>();
 
-list.addFirst(10);
-list.addLast(20);
+dq.addFirst(10);
+dq.addLast(20);
 
-System.out.println(list);
+System.out.println(dq.removeFirst());
+System.out.println(dq.removeLast());
