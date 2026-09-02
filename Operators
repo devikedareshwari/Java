@@ -1,4 +1,9 @@
-Arrays.fill(arr, 0);
-Arrays.copyOf(arr, 10);
-Arrays.equals(arr1, arr2);
-Arrays.binarySearch(arr, 5);
+List<Integer> list = new ArrayList<>();
+
+list.add(30);
+list.add(10);
+list.add(20);
+
+Collections.sort(list);
+
+System.out.println(list);
