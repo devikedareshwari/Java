@@ -1,7 +1,8 @@
-Deque<Integer> dq = new ArrayDeque<>();
+TreeSet<Integer> set = new TreeSet<>();
 
-dq.addFirst(10);
-dq.addLast(20);
+set.add(50);
+set.add(10);
+set.add(30);
+set.add(10);
 
-System.out.println(dq.removeFirst());
-System.out.println(dq.removeLast());
+System.out.println(set);
