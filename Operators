@@ -1,8 +1,7 @@
-TreeSet<Integer> set = new TreeSet<>();
+TreeMap<Integer, String> map = new TreeMap<>();
 
-set.add(50);
-set.add(10);
-set.add(30);
-set.add(10);
+map.put(3, "C");
+map.put(1, "A");
+map.put(2, "B");
 
-System.out.println(set);
+System.out.println(map);
