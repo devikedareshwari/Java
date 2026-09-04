@@ -1,9 +1,7 @@
-HashSet<Integer> set = new HashSet<>();
+int[] prefix = new int[arr.length];
 
-for (int x : arr) {
-    if (set.contains(x)) {
-        System.out.println("Duplicate found");
-    }
+prefix[0] = arr[0];
 
-    set.add(x);
+for (int i = 1; i < arr.length; i++) {
+    prefix[i] = prefix[i - 1] + arr[i];
 }
