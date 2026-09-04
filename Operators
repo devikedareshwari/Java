@@ -1,9 +1,9 @@
-String s = "banana";
+HashSet<Integer> set = new HashSet<>();
 
-HashMap<Character, Integer> map = new HashMap<>();
+for (int x : arr) {
+    if (set.contains(x)) {
+        System.out.println("Duplicate found");
+    }
 
-for (char c : s.toCharArray()) {
-    map.put(c, map.getOrDefault(c, 0) + 1);
+    set.add(x);
 }
-
-System.out.println(map);
