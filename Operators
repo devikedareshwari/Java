@@ -1,1 +1,1 @@
-students.sort((a, b) -> a.marks - b.marks);
+students.sort((a, b) -> b.marks - a.marks);
