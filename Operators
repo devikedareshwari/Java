@@ -1,4 +1,1 @@
-int x = 8;
-
-System.out.println(x << 1);
-System.out.println(x >> 1);
+students.sort((a, b) -> a.marks - b.marks);
