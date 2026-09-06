@@ -1,4 +1,7 @@
-int a = 5;
-int b = 3;
+int ans = 0;
 
-System.out.println(a ^ b);
+for (int x : arr) {
+    ans ^= x;
+}
+
+System.out.println(ans);
