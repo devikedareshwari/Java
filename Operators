@@ -1,1 +1,1 @@
-students.sort((a, b) -> b.marks - a.marks);
+list.forEach(x -> System.out.println(x));
