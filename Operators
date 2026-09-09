@@ -1,4 +1,4 @@
-try (Scanner sc = new Scanner(System.in)) {
-    int n = sc.nextInt();
-    System.out.println(n);
-}
+System.out.println("Hello\nJava");
+System.out.println("Hello\tJava");
+System.out.println("\"Java\"");
+System.out.println("C:\\Java");
