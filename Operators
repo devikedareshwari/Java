@@ -1,9 +1,4 @@
-try {
-    int x = 10 / 0;
-}
-catch (ArithmeticException e) {
-    System.out.println("Arithmetic error");
-}
-catch (Exception e) {
-    System.out.println("Other error");
+try (Scanner sc = new Scanner(System.in)) {
+    int n = sc.nextInt();
+    System.out.println(n);
 }
