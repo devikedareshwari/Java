@@ -1,5 +1,5 @@
-int age = 20;
+int day = 6;
 
-if (age > 18 && age < 30) {
-    System.out.println("Valid");
+if (day == 6 || day == 7) {
+    System.out.println("Weekend");
 }
