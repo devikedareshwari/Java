@@ -1,5 +1,7 @@
-int day = 6;
+int marks = 85;
 
-if (day == 6 || day == 7) {
-    System.out.println("Weekend");
+if (marks >= 40) {
+    if (marks >= 80) {
+        System.out.println("Excellent");
+    }
 }
