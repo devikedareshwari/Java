@@ -1,7 +1,10 @@
-static int add(int a, int b) {
-    return a + b;
-}
+class Student {
 
-static int add(int a, int b, int c) {
-    return a + b + c;
+    Student() {
+        System.out.println("Default");
+    }
+
+    Student(String name) {
+        System.out.println(name);
+    }
 }
