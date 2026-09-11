@@ -1,7 +1,7 @@
 class Student {
 
     Student() {
-        System.out.println("Default");
+        this("Unknown");
     }
 
     Student(String name) {
