@@ -1,10 +1,8 @@
 class Student {
 
-    Student() {
-        this("Unknown");
-    }
+    int age;
 
-    Student(String name) {
-        System.out.println(name);
+    Student(int age) {
+        this.age = age;
     }
 }
