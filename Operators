@@ -1,8 +1,12 @@
-class Student {
+class Animal {
+    String name = "Animal";
+}
 
-    int age;
+class Dog extends Animal {
 
-    Student(int age) {
-        this.age = age;
+    String name = "Dog";
+
+    void display() {
+        System.out.println(super.name);
     }
 }
