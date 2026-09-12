@@ -1,14 +1,18 @@
-class Animal {
-
-    Animal() {
-        System.out.println("Animal constructor");
-    }
+interface A {
+    void show();
 }
 
-class Dog extends Animal {
+interface B {
+    void display();
+}
 
-    Dog() {
-        super();
-        System.out.println("Dog constructor");
+class C implements A, B {
+
+    public void show() {
+        System.out.println("Show");
+    }
+
+    public void display() {
+        System.out.println("Display");
     }
 }
