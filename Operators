@@ -1,12 +1,14 @@
 class Animal {
-    String name = "Animal";
+
+    Animal() {
+        System.out.println("Animal constructor");
+    }
 }
 
 class Dog extends Animal {
 
-    String name = "Dog";
-
-    void display() {
-        System.out.println(super.name);
+    Dog() {
+        super();
+        System.out.println("Dog constructor");
     }
 }
