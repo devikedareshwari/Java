@@ -1,1 +1,10 @@
-System.out.println(Calculator.square(5));
+interface Test {
+
+    default void show() {
+        helper();
+    }
+
+    private void helper() {
+        System.out.println("Helper");
+    }
+}
