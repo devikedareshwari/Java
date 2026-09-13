@@ -1,6 +1,1 @@
-interface Calculator {
-
-    static int square(int x) {
-        return x * x;
-    }
-}
+System.out.println(Calculator.square(5));
