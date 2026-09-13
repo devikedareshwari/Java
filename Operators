@@ -1,6 +1,6 @@
-interface Vehicle {
+interface Calculator {
 
-    default void start() {
-        System.out.println("Vehicle started");
+    static int square(int x) {
+        return x * x;
     }
 }
