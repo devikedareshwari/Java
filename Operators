@@ -1,10 +1,11 @@
-interface Test {
+void display() {
 
-    default void show() {
-        helper();
+    class Message {
+        void show() {
+            System.out.println("Hello");
+        }
     }
 
-    private void helper() {
-        System.out.println("Helper");
-    }
+    Message m = new Message();
+    m.show();
 }
