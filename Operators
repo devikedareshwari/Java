@@ -1,18 +1,6 @@
-interface A {
-    void show();
-}
+interface Vehicle {
 
-interface B {
-    void display();
-}
-
-class C implements A, B {
-
-    public void show() {
-        System.out.println("Show");
-    }
-
-    public void display() {
-        System.out.println("Display");
+    default void start() {
+        System.out.println("Vehicle started");
     }
 }
