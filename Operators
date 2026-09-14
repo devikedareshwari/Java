@@ -1,9 +1,5 @@
-int day = 2;
+String s = "123";
 
-String result = switch (day) {
-    case 1 -> "Monday";
-    case 2 -> "Tuesday";
-    default -> "Other";
-};
+int n = Integer.parseInt(s);
 
-System.out.println(result);
+System.out.println(n + 10);
