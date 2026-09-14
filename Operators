@@ -1,2 +1,6 @@
-sealed class Animal permits Dog, Cat {
-}
+String text = """
+        Hello
+        Welcome to Java
+        """;
+
+System.out.println(text);
