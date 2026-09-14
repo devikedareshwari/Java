@@ -1,9 +1,2 @@
-class Outer {
-
-    static class Inner {
-
-        void show() {
-            System.out.println("Inner");
-        }
-    }
+sealed class Animal permits Dog, Cat {
 }
