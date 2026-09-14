@@ -1,11 +1,9 @@
-void display() {
+class Outer {
 
-    class Message {
+    static class Inner {
+
         void show() {
-            System.out.println("Hello");
+            System.out.println("Inner");
         }
     }
-
-    Message m = new Message();
-    m.show();
 }
