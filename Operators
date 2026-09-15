@@ -1,5 +1,5 @@
-int n = 100;
+char c = 'a';
 
-String s = String.valueOf(n);
+char upper = Character.toUpperCase(c);
 
-System.out.println(s);
+System.out.println(upper);
