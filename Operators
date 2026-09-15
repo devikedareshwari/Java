@@ -1,5 +1,5 @@
-char c = 'a';
-
-char upper = Character.toUpperCase(c);
-
-System.out.println(upper);
+Character.isDigit(c);
+Character.isLetter(c);
+Character.isUpperCase(c);
+Character.isLowerCase(c);
+Character.isWhitespace(c);
