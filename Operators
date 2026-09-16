@@ -1,7 +1,3 @@
-String s = "Java Python C++";
+String result = String.join("-", "Java", "Python", "C++");
 
-String[] words = s.split(" ");
-
-for (String word : words) {
-    System.out.println(word);
-}
+System.out.println(result);
