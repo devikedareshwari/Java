@@ -1,3 +1,5 @@
-String result = String.join("-", "Java", "Python", "C++");
+String email = "test@example.com";
 
-System.out.println(result);
+if (email.matches(".*@.*")) {
+    System.out.println("Valid format");
+}
