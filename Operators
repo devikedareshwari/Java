@@ -1,5 +1,4 @@
-String email = "test@example.com";
+String name = "Rahul";
+int age = 20;
 
-if (email.matches(".*@.*")) {
-    System.out.println("Valid format");
-}
+System.out.printf("Name: %s, Age: %d%n", name, age);
