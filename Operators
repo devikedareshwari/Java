@@ -1,5 +1,4 @@
-BigInteger a = new BigInteger("999999999999999999999999");
-
-BigInteger b = new BigInteger("888888888888888888888888");
+BigDecimal a = new BigDecimal("10.50");
+BigDecimal b = new BigDecimal("20.25");
 
 System.out.println(a.add(b));
