@@ -1,5 +1,3 @@
-Random random = new Random();
+UUID id = UUID.randomUUID();
 
-int number = random.nextInt(100);
-
-System.out.println(number);
+System.out.println(id);
