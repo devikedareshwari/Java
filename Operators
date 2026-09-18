@@ -1,2 +1,4 @@
-System.out.println(System.getProperty("java.version"));
-System.out.println(System.getProperty("os.name"));
+BigDecimal a = new BigDecimal("10.50");
+BigDecimal b = new BigDecimal("20.25");
+
+System.out.println(a.add(b));
