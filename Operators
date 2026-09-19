@@ -1,9 +1,10 @@
-class Outer {
+interface Test {
 
-    static class Inner {
+    default void show() {
+        helper();
+    }
 
-        void show() {
-            System.out.println("Inner");
-        }
+    private void helper() {
+        System.out.println("Helper");
     }
 }
