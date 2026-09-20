@@ -1,5 +1,5 @@
-int day = 6;
+var name = "Java";
+var age = 20;
 
-if (day == 6 || day == 7) {
-    System.out.println("Weekend");
-}
+System.out.println(name);
+System.out.println(age);
