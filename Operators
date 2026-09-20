@@ -1,5 +1,3 @@
-String name = null;
-
-if (name == null) {
-    System.out.println("No name available");
+if (name.equals("Java")) {
+    // ...
 }
