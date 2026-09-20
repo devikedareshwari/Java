@@ -1,3 +1,3 @@
-if (name.equals("Java")) {
-    // ...
+if ("Java".equals(name)) {
+    System.out.println("Matched");
 }
