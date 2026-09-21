@@ -1,1 +1,3 @@
-Objects.requireNonNull(name);
+Objects.equals(a, b);
+Objects.hash(a, b);
+Objects.requireNonNull(obj);
