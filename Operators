@@ -1,3 +1,1 @@
-if ("Java".equals(name)) {
-    System.out.println("Matched");
-}
+Objects.requireNonNull(name);
