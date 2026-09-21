@@ -1,3 +1,4 @@
-Objects.equals(a, b);
-Objects.hash(a, b);
-Objects.requireNonNull(obj);
+int[] a = {1, 2};
+int[] b = {1, 2};
+
+System.out.println(Objects.deepEquals(a, b));
