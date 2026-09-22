@@ -1,2 +1,4 @@
-WeakReference<Student> ref =
-        new WeakReference<>(new Student());
+IdentityHashMap<String, Integer> map =
+        new IdentityHashMap<>();
+
+map.put("Java", 10);
