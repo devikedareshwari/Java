@@ -1,1 +1,2 @@
-System.gc();
+WeakReference<Student> ref =
+        new WeakReference<>(new Student());
