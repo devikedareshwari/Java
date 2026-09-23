@@ -1,9 +1,12 @@
-static int sum(int... numbers) {
-    int total = 0;
+class Student implements Comparable<Student> {
 
-    for (int x : numbers) {
-        total += x;
+    int marks;
+
+    Student(int marks) {
+        this.marks = marks;
     }
 
-    return total;
+    public int compareTo(Student other) {
+        return this.marks - other.marks;
+    }
 }
