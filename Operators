@@ -1,5 +1,9 @@
-StringBuffer sb = new StringBuffer("Java");
+static int sum(int... numbers) {
+    int total = 0;
 
-sb.append(" Programming");
+    for (int x : numbers) {
+        total += x;
+    }
 
-System.out.println(sb);
+    return total;
+}
