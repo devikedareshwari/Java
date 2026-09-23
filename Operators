@@ -1,11 +1,5 @@
-void display() {
+StringBuffer sb = new StringBuffer("Java");
 
-    class Message {
-        void show() {
-            System.out.println("Hello");
-        }
-    }
+sb.append(" Programming");
 
-    Message m = new Message();
-    m.show();
-}
+System.out.println(sb);
