@@ -1,6 +1,11 @@
-EnumSet<Day> days = EnumSet.of(
-    Day.MONDAY,
-    Day.TUESDAY
-);
+void display() {
 
-System.out.println(days);
+    class Message {
+        void show() {
+            System.out.println("Hello");
+        }
+    }
+
+    Message m = new Message();
+    m.show();
+}
