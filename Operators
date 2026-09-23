@@ -1,12 +1,5 @@
-class Student implements Comparable<Student> {
+CopyOnWriteArrayList<Integer> list =
+        new CopyOnWriteArrayList<>();
 
-    int marks;
-
-    Student(int marks) {
-        this.marks = marks;
-    }
-
-    public int compareTo(Student other) {
-        return this.marks - other.marks;
-    }
-}
+list.add(10);
+list.add(20);
