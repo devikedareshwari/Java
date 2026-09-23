@@ -1,8 +1,6 @@
-enum Day {
-    MONDAY, TUESDAY, WEDNESDAY
-}
+EnumSet<Day> days = EnumSet.of(
+    Day.MONDAY,
+    Day.TUESDAY
+);
 
-EnumMap<Day, String> map = new EnumMap<>(Day.class);
-
-map.put(Day.MONDAY, "Study");
-map.put(Day.TUESDAY, "Practice");
+System.out.println(days);
