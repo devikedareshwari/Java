@@ -1,4 +1,8 @@
-IdentityHashMap<String, Integer> map =
-        new IdentityHashMap<>();
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY
+}
 
-map.put("Java", 10);
+EnumMap<Day, String> map = new EnumMap<>(Day.class);
+
+map.put(Day.MONDAY, "Study");
+map.put(Day.TUESDAY, "Practice");
