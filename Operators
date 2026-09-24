@@ -1,2 +1,5 @@
-System.out.println(System.getProperty("java.version"));
-System.out.println(System.getProperty("os.name"));
+AtomicInteger count = new AtomicInteger(0);
+
+count.incrementAndGet();
+
+System.out.println(count.get());
