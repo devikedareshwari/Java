@@ -1,5 +1,5 @@
-CopyOnWriteArrayList<Integer> list =
-        new CopyOnWriteArrayList<>();
+ConcurrentHashMap<String, Integer> map =
+        new ConcurrentHashMap<>();
 
-list.add(10);
-list.add(20);
+map.put("Java", 1);
+map.put("Python", 2);
