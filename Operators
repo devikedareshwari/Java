@@ -1,5 +1,5 @@
-AtomicInteger count = new AtomicInteger(0);
+AtomicInteger count = new AtomicInteger(10);
 
-count.incrementAndGet();
+count.addAndGet(5);
 
 System.out.println(count.get());
