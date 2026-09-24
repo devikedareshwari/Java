@@ -1,5 +1,3 @@
-ConcurrentHashMap<String, Integer> map =
-        new ConcurrentHashMap<>();
-
-map.put("Java", 1);
-map.put("Python", 2);
+List<Integer> result = list.stream()
+    .filter(x -> x % 2 == 0)
+    .collect(Collectors.toList());
