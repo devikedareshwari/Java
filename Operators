@@ -1,5 +1,4 @@
-AtomicInteger count = new AtomicInteger(10);
+class Task {
 
-count.addAndGet(5);
-
-System.out.println(count.get());
+    volatile boolean running = true;
+}
