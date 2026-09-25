@@ -1,9 +1,7 @@
-static int sum(int... numbers) {
-    int total = 0;
-
-    for (int x : numbers) {
-        total += x;
+for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+        break;
     }
 
-    return total;
+    System.out.println(i);
 }
