@@ -1,18 +1,5 @@
-public class StringExample {
-    public static void main(String[] args) {
-        String message = "Hello, Java World!";
-        System.out.println("Original String: " + message);
+StringBuffer sb = new StringBuffer("Java");
 
-        int length = message.length();
-        System.out.println("Length of String: " + length);
+sb.append(" Programming");
 
-        String upper = message.toUpperCase();
-        System.out.println("Uppercase: " + upper);
-
-        boolean hasJava = message.contains("Java");
-        System.out.println("Contains 'Java'?: " + hasJava);
-
-        char firstLetter = message.charAt(0);
-        System.out.println("First Character: " + firstLetter);
-    }
-}
+System.out.println(sb);
