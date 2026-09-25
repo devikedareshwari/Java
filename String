@@ -1,5 +1,9 @@
-int a = 10;
+static int sum(int... numbers) {
+    int total = 0;
 
-Integer b = a;       // Autoboxing
+    for (int x : numbers) {
+        total += x;
+    }
 
-int c = b;           // Unboxing
+    return total;
+}
