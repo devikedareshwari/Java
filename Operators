@@ -1,2 +1,3 @@
-ExecutorService service =
-        Executors.newFixedThreadPool(3);
+UUID id = UUID.randomUUID();
+
+System.out.println(id);
