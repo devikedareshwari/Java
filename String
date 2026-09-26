@@ -1,2 +1,5 @@
-ExecutorService service =
-        Executors.newFixedThreadPool(3);
+service.submit(() -> {
+    System.out.println("Task running");
+});
+
+service.shutdown();
