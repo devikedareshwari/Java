@@ -1,5 +1,3 @@
-service.submit(() -> {
-    System.out.println("Task running");
-});
-
-service.shutdown();
+Callable<Integer> task = () -> {
+    return 10 + 20;
+};
