@@ -1,3 +1,4 @@
-CompletableFuture
-    .supplyAsync(() -> "Hello")
-    .thenAccept(System.out::println);
+CompletableFuture<Integer> result =
+    CompletableFuture
+        .supplyAsync(() -> 10)
+        .thenApply(x -> x * 2);
