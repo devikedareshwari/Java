@@ -1,9 +1,6 @@
-ReentrantLock lock = new ReentrantLock();
-
-lock.lock();
-
-try {
-    System.out.println("Critical section");
-} finally {
-    lock.unlock();
+for (int i = 1; i <= 5; i++) {
+    for (int j = 1; j <= i; j++) {
+        System.out.print(j + " ");
+    }
+    System.out.println();
 }
