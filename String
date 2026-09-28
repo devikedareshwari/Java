@@ -1,8 +1,9 @@
-CompletableFuture<Integer> a =
-    CompletableFuture.supplyAsync(() -> 10);
+ReentrantLock lock = new ReentrantLock();
 
-CompletableFuture<Integer> b =
-    CompletableFuture.supplyAsync(() -> 20);
+lock.lock();
 
-CompletableFuture<Integer> result =
-    a.thenCombine(b, (x, y) -> x + y);
+try {
+    System.out.println("Critical section");
+} finally {
+    lock.unlock();
+}
