@@ -1,3 +1,10 @@
-list.stream()
-    .sorted()
-    .forEach(System.out::println);
+ReadWriteLock lock =
+        new ReentrantReadWriteLock();
+
+lock.readLock().lock();
+
+try {
+    System.out.println("Reading");
+} finally {
+    lock.readLock().unlock();
+}
