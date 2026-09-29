@@ -1,10 +1,9 @@
-ReadWriteLock lock =
-        new ReentrantReadWriteLock();
+Semaphore semaphore = new Semaphore(2);
 
-lock.readLock().lock();
+semaphore.acquire();
 
 try {
-    System.out.println("Reading");
+    System.out.println("Using resource");
 } finally {
-    lock.readLock().unlock();
+    semaphore.release();
 }
