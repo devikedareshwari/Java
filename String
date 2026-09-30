@@ -1,6 +1,6 @@
 static void checkAge(int age) {
     if (age < 18) {
-        throw new IllegalArgumentException("Not eligible");
-            
+        throw new IllegalArgumentExceptio("Not eligible");
+        
     }
 }
