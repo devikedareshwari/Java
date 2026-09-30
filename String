@@ -1,9 +1,7 @@
-Semaphore semaphore = new Semaphore(2);
+CountDownLatch latch = new CountDownLatch(3);
 
-semaphore.acquire();
+latch.countDown();
+latch.countDown();
+latch.countDown();
 
-try {
-    System.out.println("Using resource");
-} finally {
-    semaphore.release();
-}
+latch.await();
