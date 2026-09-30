@@ -1,9 +1,6 @@
-class Outer {
+interface Vehicle {
 
-    static class Inner {
-
-        void show() {
-            System.out.println("Inner");
-        }
+    default void start() {
+        System.out.println("Vehicle started");
     }
 }
