@@ -1,6 +1,9 @@
-interface Calculator {
+class Outer {
 
-    static int square(int x) {
-        return x * x;
+    static class Inner {
+
+        void show() {
+            System.out.println("Inner");
+        }
     }
 }
