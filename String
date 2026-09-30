@@ -1,7 +1,6 @@
-CountDownLatch latch = new CountDownLatch(3);
+interface Calculator {
 
-latch.countDown();
-latch.countDown();
-latch.countDown();
-
-latch.await();
+    static int square(int x) {
+        return x * x;
+    }
+}
