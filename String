@@ -1,6 +1,8 @@
-interface Vehicle {
+class Test {
 
-    default void start() {
-        System.out.println("Vehicle started");
+    static int count = 0;
+
+    Test() {
+        count++;
     }
 }
