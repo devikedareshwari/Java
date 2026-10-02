@@ -1,9 +1,9 @@
-ReentrantLock lock = new ReentrantLock();
+Semaphore semaphore = new Semaphore(2);
 
-lock.lock();
+semaphore.acquire();
 
 try {
-    System.out.println("Critical section");
+    System.out.println("Using resource");
 } finally {
-    lock.unlock();
+    semaphore.release();
 }
