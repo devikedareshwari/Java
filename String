@@ -1,3 +1,9 @@
-Future<Integer> result = service.submit(task);
+ReentrantLock lock = new ReentrantLock();
 
-System.out.println(result.get());
+lock.lock();
+
+try {
+    System.out.println("Critical section");
+} finally {
+    lock.unlock();
+}
