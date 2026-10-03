@@ -1,5 +1,5 @@
-Method[] methods = c.getDeclaredMethods();
+Field[] fields = Student.class.getDeclaredFields();
 
-for (Method m : methods) {
-    System.out.println(m.getName());
+for (Field f : fields) {
+    System.out.println(f.getName());
 }
