@@ -1,3 +1,5 @@
-Class<?> c = Student.class;
+Method[] methods = c.getDeclaredMethods();
 
-System.out.println(c.getName());
+for (Method m : methods) {
+    System.out.println(m.getName());
+}
