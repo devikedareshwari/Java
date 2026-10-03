@@ -1,5 +1,2 @@
-Field[] fields = Student.class.getDeclaredFields();
-
-for (Field f : fields) {
-    System.out.println(f.getName());
-}
+Constructor<?>[] constructors =
+        Student.class.getDeclaredConstructors();
