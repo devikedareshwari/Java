@@ -1,2 +1,3 @@
-MethodHandles.Lookup lookup =
-    MethodHandles.lookup();
+Class<?> c = Student.class;
+
+System.out.println(c.getName());
