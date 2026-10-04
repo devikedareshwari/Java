@@ -1,2 +1,7 @@
 Constructor<?>[] constructors =
         Student.class.getDeclaredConstructors();
+        Optional<String> name = Optional.of("Java");
+
+Optional<Integer> length = name.map(String::length);
+
+System.out.println(length.get());
