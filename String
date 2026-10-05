@@ -59,3 +59,17 @@ class Main {
         System.out.println(scores);
     }
 }
+import java.util.regex.*;
+
+class Main {
+    public static void main(String[] args) {
+        String text = "My marks are 85 and 92";
+
+        Pattern pattern = Pattern.compile("\\d+");
+        Matcher matcher = pattern.matcher(text);
+
+        while (matcher.find()) {
+            System.out.println(matcher.group());
+        }
+    }
+}
