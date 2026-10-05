@@ -46,3 +46,16 @@ class Main {
         System.out.println(map);
     }
 }
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Map<String, Integer> scores = new HashMap<>();
+
+        scores.merge("Alice", 10, Integer::sum);
+        scores.merge("Alice", 20, Integer::sum);
+        scores.merge("Bob", 15, Integer::sum);
+
+        System.out.println(scores);
+    }
+}
