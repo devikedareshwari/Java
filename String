@@ -73,3 +73,31 @@ class Main {
         }
     }
 }
+import java.util.*;
+
+class Student {
+    String name;
+    int marks;
+
+    Student(String name, int marks) {
+        this.name = name;
+        this.marks = marks;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+
+        PriorityQueue<Student> pq =
+            new PriorityQueue<>((a, b) -> b.marks - a.marks);
+
+        pq.add(new Student("A", 75));
+        pq.add(new Student("B", 92));
+        pq.add(new Student("C", 85));
+
+        while (!pq.isEmpty()) {
+            Student s = pq.poll();
+            System.out.println(s.name + " " + s.marks);
+        }
+    }
+}
