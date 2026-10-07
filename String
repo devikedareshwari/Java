@@ -1,1 +1,7 @@
-uses PaymentService.class;
+String result = String.format(
+    "Name: %s, Age: %d",
+    "Rahul",
+    20
+);
+
+System.out.println(result);
