@@ -1,4 +1,3 @@
-@Override
-@Deprecated
-@SuppressWarnings
-@FunctionalInterface
+module myapp {
+    exports com.example.app;
+}
