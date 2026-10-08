@@ -1,7 +1,3 @@
-String result = String.format(
-    "Name: %s, Age: %d",
-    "Rahul",
-    20
-);
+Locale india = Locale.of("en", "IN");
 
-System.out.println(result);
+System.out.println(india);
