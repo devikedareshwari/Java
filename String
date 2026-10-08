@@ -1,4 +1,5 @@
-NumberFormat format =
-    NumberFormat.getCurrencyInstance();
+int n = 100;
 
-System.out.println(format.format(12345.67));
+String s = String.valueOf(n);
+
+System.out.println(s);
