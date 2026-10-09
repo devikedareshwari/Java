@@ -1,5 +1,4 @@
-String data = Files.readString(
-    Path.of("data.txt")
+Files.writeString(
+    Path.of("output.txt"),
+    "Hello Java"
 );
-
-System.out.println(data);
