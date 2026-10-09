@@ -1,4 +1,3 @@
-ResourceBundle bundle =
-    ResourceBundle.getBundle("messages");
+Path path = Path.of("data.txt");
 
-System.out.println(bundle.getString("hello"));
+System.out.println(path.toAbsolutePath());
