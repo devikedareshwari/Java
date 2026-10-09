@@ -1,5 +1,4 @@
-String s = "123";
+NumberFormat format =
+    NumberFormat.getCurrencyInstance();
 
-int n = Integer.parseInt(s);
-
-System.out.println(n + 10);
+System.out.println(format.format(12345.67));
