@@ -1,3 +1,5 @@
-Path path = Path.of("data.txt");
+String data = Files.readString(
+    Path.of("data.txt")
+);
 
-System.out.println(path.toAbsolutePath());
+System.out.println(data);
