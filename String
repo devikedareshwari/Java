@@ -1,4 +1,4 @@
-Files.writeString(
-    Path.of("output.txt"),
-    "Hello Java"
-);
+class Student implements Serializable {
+    String name;
+    int age;
+}
