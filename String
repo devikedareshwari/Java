@@ -1,6 +1,10 @@
-class Student implements Serializable {
+class Student implements Externalizable {
 
-    String name;
+    public void writeExternal(ObjectOutput out) {
+        // write data
+    }
 
-    transient String password;
+    public void readExternal(ObjectInput in) {
+        // read data
+    }
 }
