@@ -1,6 +1,6 @@
-InputStream input =
-    new FileInputStream("data.txt");
+OutputStream output =
+    new FileOutputStream("data.txt");
 
-int data = input.read();
+output.write(65);
 
-input.close();
+output.close();
