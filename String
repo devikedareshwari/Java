@@ -1,10 +1,6 @@
-class Student implements Externalizable {
+InputStream input =
+    new FileInputStream("data.txt");
 
-    public void writeExternal(ObjectOutput out) {
-        // write data
-    }
+int data = input.read();
 
-    public void readExternal(ObjectInput in) {
-        // read data
-    }
-}
+input.close();
