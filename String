@@ -1,11 +1,8 @@
-class Teacher {
-}
+class Car {
 
-class Department {
+    private Engine engine;
 
-    Teacher teacher;
-
-    Department(Teacher teacher) {
-        this.teacher = teacher;
+    Car(Engine engine) {
+        this.engine = engine;
     }
 }
