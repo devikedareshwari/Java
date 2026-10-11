@@ -1,4 +1,6 @@
-BufferedInputStream input =
-    new BufferedInputStream(
-        new FileInputStream("data.txt")
-    );
+class Engine {
+}
+
+class Car {
+    private Engine engine = new Engine();
+}
