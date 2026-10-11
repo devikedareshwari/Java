@@ -1,6 +1,4 @@
-OutputStream output =
-    new FileOutputStream("data.txt");
-
-output.write(65);
-
-output.close();
+BufferedInputStream input =
+    new BufferedInputStream(
+        new FileInputStream("data.txt")
+    );
