@@ -1,8 +1,28 @@
-class Car {
+class Student {
 
-    private Engine engine;
+    private String name;
+    private int age;
 
-    Car(Engine engine) {
-        this.engine = engine;
+    static class Builder {
+
+        private String name;
+        private int age;
+
+        Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        Builder age(int age) {
+            this.age = age;
+            return this;
+        }
+
+        Student build() {
+            Student s = new Student();
+            s.name = name;
+            s.age = age;
+            return s;
+        }
     }
 }
