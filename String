@@ -1,4 +1,11 @@
-Student s = new Student.Builder()
-    .name("Rahul")
-    .age(20)
-    .build();
+class VehicleFactory {
+
+    static Vehicle create(String type) {
+
+        if (type.equals("car")) {
+            return new Car();
+        }
+
+        return new Bike();
+    }
+}
