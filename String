@@ -1,10 +1,5 @@
-interface PaymentStrategy {
-    void pay();
-}
+Optional<String> name = Optional.of("Java");
 
-class UpiPayment implements PaymentStrategy {
+Optional<Integer> length = name.map(String::length);
 
-    public void pay() {
-        System.out.println("UPI payment");
-    }
-}
+System.out.println(length.get());
