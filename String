@@ -1,11 +1,12 @@
-class VehicleFactory {
+class Database {
 
-    static Vehicle create(String type) {
+    private static final Database INSTANCE =
+        new Database();
 
-        if (type.equals("car")) {
-            return new Car();
-        }
+    private Database() {
+    }
 
-        return new Bike();
+    public static Database getInstance() {
+        return INSTANCE;
     }
 }
