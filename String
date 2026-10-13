@@ -1,9 +1,1 @@
-List<String> names = Arrays.asList(
-    "Apple", "Ant", "Banana", "Ball"
-);
-
-Map<Character, List<String>> result =
-    names.stream()
-         .collect(Collectors.groupingBy(s -> s.charAt(0)));
-
-System.out.println(result);
+{A=[Apple, Ant], B=[Banana, Ball]}
