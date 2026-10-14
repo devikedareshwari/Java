@@ -1,5 +1,4 @@
-Path path = Path.of("data.txt");
+ResourceBundle bundle =
+    ResourceBundle.getBundle("messages");
 
-if (Files.exists(path)) {
-    System.out.println("File exists");
-}
+System.out.println(bundle.getString("hello"));
