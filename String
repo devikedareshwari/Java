@@ -1,4 +1,2 @@
-ResourceBundle bundle =
-    ResourceBundle.getBundle("messages");
-
-System.out.println(bundle.getString("hello"));
+Constructor<?>[] constructors =
+        Student.class.getDeclaredConstructors();
