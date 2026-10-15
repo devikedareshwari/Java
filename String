@@ -1,7 +1,2 @@
-CountDownLatch latch = new CountDownLatch(3);
-
-latch.countDown();
-latch.countDown();
-latch.countDown();
-
-latch.await();
+CyclicBarrier barrier =
+    new CyclicBarrier(3);
