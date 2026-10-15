@@ -1,2 +1,9 @@
-Constructor<?>[] constructors =
-        Student.class.getDeclaredConstructors();
+Semaphore semaphore = new Semaphore(2);
+
+semaphore.acquire();
+
+try {
+    System.out.println("Using resource");
+} finally {
+    semaphore.release();
+}
