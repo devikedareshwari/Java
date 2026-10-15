@@ -1,2 +1,2 @@
-CyclicBarrier barrier =
-    new CyclicBarrier(3);
+MethodHandles.Lookup lookup =
+    MethodHandles.lookup();
