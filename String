@@ -1,2 +1,9 @@
-MethodHandles.Lookup lookup =
-    MethodHandles.lookup();
+ReentrantLock lock = new ReentrantLock();
+
+lock.lock();
+
+try {
+    System.out.println("Critical section");
+} finally {
+    lock.unlock();
+}
