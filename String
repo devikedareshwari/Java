@@ -1,5 +1,7 @@
-var name = "Java";
-var age = 20;
+String result = String.format(
+    "Name: %s, Age: %d",
+    "Rahul",
+    20
+);
 
-System.out.println(name);
-System.out.println(age);
+System.out.println(result);
