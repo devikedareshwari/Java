@@ -1,7 +1,2 @@
-String result = String.format(
-    "Name: %s, Age: %d",
-    "Rahul",
-    20
-);
-
-System.out.println(result);
+CyclicBarrier barrier =
+    new CyclicBarrier(3);
