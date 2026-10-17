@@ -1,2 +1,5 @@
-CyclicBarrier barrier =
-    new CyclicBarrier(3);
+String name = null;
+
+if (name == null) {
+    System.out.println("No name available");
+}
