@@ -1,5 +1,6 @@
-int n = 100;
+class MyThread extends Thread {
 
-String s = String.valueOf(n);
-
-System.out.println(s);
+    public void run() {
+        System.out.println("Thread running");
+    }
+}
