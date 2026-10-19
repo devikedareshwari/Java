@@ -1,23 +1,19 @@
 class Main {
     public static void main(String[] args) {
-        ThreadLocal<Integer> number =
-            ThreadLocal.withInitial(() -> 100);
+        int[] arr = {10, 25, 8, 40, 30};
 
-        System.out.println("Main: " + number.get());
+        int largest = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
 
-        Thread t = new Thread(() -> {
-            number.set(200);
-            System.out.println("Child: " + number.get());
-        });
-
-        t.start();
-
-        try {
-            t.join();
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+        for (int n : arr) {
+            if (n > largest) {
+                second = largest;
+                largest = n;
+            } else if (n > second && n != largest) {
+                second = n;
+            }
         }
 
-        System.out.println("Main again: " + number.get());
+        System.out.println("Second largest: " + second);
     }
 }
