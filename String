@@ -1,12 +1,14 @@
-import java.util.Arrays;
+import java.util.StringJoiner;
 
 class Main {
     public static void main(String[] args) {
-        int[] a = {10, 20, 30, 40};
-        int[] b = {10, 20, 35, 40};
+        StringJoiner joiner =
+            new StringJoiner(" | ", "[", "]");
 
-        int index = Arrays.mismatch(a, b);
+        joiner.add("Java");
+        joiner.add("Python");
+        joiner.add("C++");
 
-        System.out.println("First mismatch index: " + index);
+        System.out.println(joiner);
     }
 }
