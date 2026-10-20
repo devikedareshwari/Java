@@ -1,5 +1,9 @@
-Optional<String> name = Optional.of("Java");
+List<String> names = Arrays.asList(
+    "Apple", "Ant", "Banana", "Ball"
+);
 
-Optional<Integer> length = name.map(String::length);
+Map<Character, List<String>> result =
+    names.stream()
+         .collect(Collectors.groupingBy(s -> s.charAt(0)));
 
-System.out.println(length.get());
+System.out.println(result);
