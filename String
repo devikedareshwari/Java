@@ -1,16 +1,19 @@
-import java.util.*;
-
 class Main {
     public static void main(String[] args) {
-        String[] words = {"apple", "banana", "apple", "orange", "banana"};
+        int[] arr = {10, 25, 8, 40, 30};
 
-        Map<String, Integer> map = new HashMap<>();
+        int largest = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
 
-        for (String word : words) {
-            map.computeIfAbsent(word, k -> 0);
-            map.put(word, map.get(word) + 1);
+        for (int n : arr) {
+            if (n > largest) {
+                second = largest;
+                largest = n;
+            } else if (n > second && n != largest) {
+                second = n;
+            }
         }
 
-        System.out.println(map);
+        System.out.println("Second largest: " + second);
     }
 }
