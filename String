@@ -1,13 +1,13 @@
 class Main {
     public static void main(String[] args) {
-        int a = 48, b = 18;
+        int n = 25;
+        String binary = "";
 
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
+        while (n > 0) {
+            binary = (n % 2) + binary;
+            n /= 2;
         }
 
-        System.out.println("GCD: " + a);
+        System.out.println(binary);
     }
 }
