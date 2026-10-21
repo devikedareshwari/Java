@@ -1,13 +1,9 @@
 class Main {
     public static void main(String[] args) {
-        int n = 25;
-        String binary = "";
+        String s = "madam";
+        String reversed = new StringBuilder(s).reverse().toString();
 
-        while (n > 0) {
-            binary = (n % 2) + binary;
-            n /= 2;
-        }
-
-        System.out.println(binary);
+        System.out.println(s.equals(reversed)
+                ? "Palindrome" : "Not palindrome");
     }
 }
