@@ -1,9 +1,18 @@
 class Main {
     public static void main(String[] args) {
-        String s = "madam";
-        String reversed = new StringBuilder(s).reverse().toString();
+        String s = "Hello Java";
+        int vowels = 0, consonants = 0;
 
-        System.out.println(s.equals(reversed)
-                ? "Palindrome" : "Not palindrome");
+        for (char c : s.toLowerCase().toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                if ("aeiou".indexOf(c) >= 0)
+                    vowels++;
+                else
+                    consonants++;
+            }
+        }
+
+        System.out.println("Vowels: " + vowels);
+        System.out.println("Consonants: " + consonants);
     }
 }
