@@ -1,11 +1,17 @@
-class Main {
-    static <T> void display(T value) {
-        System.out.println(value);
-    }
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY
+}
 
+class Main {
     public static void main(String[] args) {
-        display(100);
-        display("Java");
-        display(3.14);
+        Day day = Day.MONDAY;
+
+        String type = switch (day) {
+            case MONDAY -> "Start of week";
+            case TUESDAY -> "Second day";
+            case WEDNESDAY -> "Middle of these days";
+        };
+
+        System.out.println(type);
     }
 }
