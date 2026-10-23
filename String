@@ -1,17 +1,24 @@
-import java.util.Arrays;
-
 class Main {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5};
-        int k = 2;
-        k %= arr.length;
+        int[] arr = {10, 20, 30, 40, 50};
+        int target = 40;
 
-        int[] result = new int[arr.length];
+        int left = 0, right = arr.length - 1;
+        int answer = -1;
 
-        for (int i = 0; i < arr.length; i++) {
-            result[i] = arr[(i + k) % arr.length];
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+
+            if (arr[mid] == target) {
+                answer = mid;
+                break;
+            } else if (arr[mid] < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
         }
 
-        System.out.println(Arrays.toString(result));
+        System.out.println("Index: " + answer);
     }
 }
