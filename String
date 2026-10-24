@@ -1,17 +1,11 @@
-enum Day {
-    MONDAY, TUESDAY, WEDNESDAY
-}
+import java.nio.file.*;
 
 class Main {
-    public static void main(String[] args) {
-        Day day = Day.MONDAY;
+    public static void main(String[] args) throws Exception {
+        Path path = Path.of("notes.txt");
 
-        String type = switch (day) {
-            case MONDAY -> "Start of week";
-            case TUESDAY -> "Second day";
-            case WEDNESDAY -> "Middle of these days";
-        };
+        String content = Files.readString(path);
 
-        System.out.println(type);
+        System.out.println(content);
     }
 }
