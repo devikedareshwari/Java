@@ -1,24 +1,15 @@
-import java.util.*;
+import java.util.Arrays;
 
 class Main {
     public static void main(String[] args) {
-        String s = "banana";
-        Map<Character, Integer> frequency = new HashMap<>();
+        int[] arr = {2, 4, 6, 8};
+        int sum = 0;
 
-        for (char c : s.toCharArray()) {
-            frequency.merge(c, 1, Integer::sum);
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            arr[i] = sum;
         }
 
-        char mostFrequent = '\0';
-        int max = 0;
-
-        for (var entry : frequency.entrySet()) {
-            if (entry.getValue() > max) {
-                max = entry.getValue();
-                mostFrequent = entry.getKey();
-            }
-        }
-
-        System.out.println(mostFrequent + ": " + max);
+        System.out.println(Arrays.toString(arr));
     }
 }
