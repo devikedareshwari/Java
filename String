@@ -1,11 +1,11 @@
-import java.nio.file.*;
+import java.util.concurrent.*;
 
 class Main {
-    public static void main(String[] args) throws Exception {
-        Path path = Path.of("notes.txt");
+    public static void main(String[] args) {
+        CompletableFuture<Integer> future =
+            CompletableFuture.supplyAsync(() -> 10)
+                .thenApply(n -> n * n);
 
-        String content = Files.readString(path);
-
-        System.out.println(content);
+        System.out.println(future.join());
     }
 }
