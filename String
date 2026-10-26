@@ -1,5 +1,4 @@
-Animal a = new Dog();
+String a = new String("Java");
+String b = new String("Java");
 
-Dog d = (Dog) a;
-
-d.bark();
+System.out.println(a == b);
