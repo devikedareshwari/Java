@@ -1,12 +1,8 @@
-class Animal {
-    String name = "Animal";
-}
+class Outer {
 
-class Dog extends Animal {
-
-    String name = "Dog";
-
-    void display() {
-        System.out.println(super.name);
+    class Inner {
+        void display() {
+            System.out.println("Inner class");
+        }
     }
 }
