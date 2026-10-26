@@ -1,8 +1,4 @@
-class Outer {
-
-    class Inner {
-        void display() {
-            System.out.println("Inner class");
-        }
-    }
+@GetMapping("/students")
+public List<Student> getStudents() {
+    return students;
 }
