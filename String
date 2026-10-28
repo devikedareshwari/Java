@@ -1,12 +1,19 @@
 class Main {
     public static void main(String[] args) {
-        int n = 12345, reversed = 0;
+        int[][] matrix = {
+            {4, 8, 2},
+            {9, 3, 7},
+            {5, 6, 1}
+        };
 
-        while (n > 0) {
-            reversed = reversed * 10 + n % 10;
-            n /= 10;
+        int max = Integer.MIN_VALUE;
+
+        for (int[] row : matrix) {
+            for (int value : row) {
+                max = Math.max(max, value);
+            }
         }
 
-        System.out.println(reversed);
+        System.out.println(max);
     }
 }
