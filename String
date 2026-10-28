@@ -1,13 +1,12 @@
 class Main {
     public static void main(String[] args) {
-        int n = 987654;
-        int count = 0;
+        int n = 12345, reversed = 0;
 
-        do {
-            count++;
+        while (n > 0) {
+            reversed = reversed * 10 + n % 10;
             n /= 10;
-        } while (n != 0);
+        }
 
-        System.out.println(count);
+        System.out.println(reversed);
     }
 }
