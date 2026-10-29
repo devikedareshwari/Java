@@ -2,30 +2,17 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        String s = "{[()]}";
-        Deque<Character> stack = new ArrayDeque<>();
-        boolean valid = true;
+        Stack<Integer> in = new Stack<>();
+        Stack<Integer> out = new Stack<>();
 
-        for (char c : s.toCharArray()) {
-            if (c == '(' || c == '[' || c == '{') {
-                stack.push(c);
-            } else {
-                if (stack.isEmpty()) {
-                    valid = false;
-                    break;
-                }
+        in.push(10);
+        in.push(20);
+        in.push(30);
 
-                char open = stack.pop();
-
-                if ((c == ')' && open != '(') ||
-                    (c == ']' && open != '[') ||
-                    (c == '}' && open != '{')) {
-                    valid = false;
-                    break;
-                }
-            }
+        while (!in.isEmpty()) {
+            out.push(in.pop());
         }
 
-        System.out.println(valid && stack.isEmpty());
+        System.out.println(out.pop());
     }
 }
