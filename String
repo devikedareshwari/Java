@@ -2,18 +2,30 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 4};
-        int[] b = {3, 4, 5, 6};
+        String s = "{[()]}";
+        Deque<Character> stack = new ArrayDeque<>();
+        boolean valid = true;
 
-        Set<Integer> first = new HashSet<>();
-        Set<Integer> result = new TreeSet<>();
+        for (char c : s.toCharArray()) {
+            if (c == '(' || c == '[' || c == '{') {
+                stack.push(c);
+            } else {
+                if (stack.isEmpty()) {
+                    valid = false;
+                    break;
+                }
 
-        for (int x : a) first.add(x);
+                char open = stack.pop();
 
-        for (int x : b) {
-            if (first.contains(x)) result.add(x);
+                if ((c == ')' && open != '(') ||
+                    (c == ']' && open != '[') ||
+                    (c == '}' && open != '{')) {
+                    valid = false;
+                    break;
+                }
+            }
         }
 
-        System.out.println(result);
+        System.out.println(valid && stack.isEmpty());
     }
-}Intersection
+}
