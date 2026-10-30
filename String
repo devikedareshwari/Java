@@ -1,10 +1,13 @@
-import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 class Main {
     public static void main(String[] args) {
-        BigInteger a = new BigInteger("99999999999999999999");
-        BigInteger b = new BigInteger("88888888888888888888");
+        LocalDate date = LocalDate.of(2026, 10, 27);
 
-        System.out.println(a.add(b));
+        DateTimeFormatter format =
+            DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+        System.out.println(date.format(format));
     }
 }
