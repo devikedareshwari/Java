@@ -1,21 +1,14 @@
-import java.util.*;
-
 class Main {
     public static void main(String[] args) {
-        String s = "swiss";
-        Map<Character, Integer> freq = new LinkedHashMap<>();
+        String sentence = "Java makes programming interesting";
+        String longest = "";
 
-        for (char c : s.toCharArray()) {
-            freq.merge(c, 1, Integer::sum);
-        }
-
-        for (var entry : freq.entrySet()) {
-            if (entry.getValue() == 1) {
-                System.out.println(entry.getKey());
-                return;
+        for (String word : sentence.split("\\s+")) {
+            if (word.length() > longest.length()) {
+                longest = word;
             }
         }
 
-        System.out.println("None");
+        System.out.println(longest);
     }
 }
