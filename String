@@ -1,11 +1,10 @@
-import java.io.*;
+import java.math.BigInteger;
 
 class Main {
     public static void main(String[] args) {
-        try (StringReader reader = new StringReader("Hello Java")) {
-            System.out.println((char) reader.read());
-        } catch (IOException e) {
-            System.out.println("Reading failed");
-        }
+        BigInteger a = new BigInteger("99999999999999999999");
+        BigInteger b = new BigInteger("88888888888888888888");
+
+        System.out.println(a.add(b));
     }
 }
