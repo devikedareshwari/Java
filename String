@@ -1,14 +1,22 @@
+class InvalidAgeException extends Exception {
+    InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
 class Main {
-    public static void main(String[] args) {
-        String sentence = "Java makes programming interesting";
-        String longest = "";
-
-        for (String word : sentence.split("\\s+")) {
-            if (word.length() > longest.length()) {
-                longest = word;
-            }
+    static void checkAge(int age) throws InvalidAgeException {
+        if (age < 18) {
+            throw new InvalidAgeException("Age must be 18 or above");
         }
+        System.out.println("Allowed");
+    }
 
-        System.out.println(longest);
+    public static void main(String[] args) {
+        try {
+            checkAge(16);
+        } catch (InvalidAgeException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
