@@ -1,13 +1,16 @@
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
-
 class Main {
-    public static void main(String[] args) {
-        LocalDate start = LocalDate.of(2026, 1, 1);
-        LocalDate end = LocalDate.of(2026, 1, 10);
+    public static void main(String[] args)
+            throws InterruptedException {
 
-        long days = ChronoUnit.DAYS.between(start, end);
+        Thread t = new Thread(() -> {
+            for (int i = 1; i <= 3; i++) {
+                System.out.println("Task " + i);
+            }
+        });
 
-        System.out.println(days);
+        t.start();
+        t.join();
+
+        System.out.println("Finished");
     }
 }
