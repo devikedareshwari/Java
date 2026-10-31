@@ -1,13 +1,13 @@
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
 class Main {
     public static void main(String[] args) {
-        LocalDate date = LocalDate.of(2026, 10, 27);
+        LocalDate start = LocalDate.of(2026, 1, 1);
+        LocalDate end = LocalDate.of(2026, 1, 10);
 
-        DateTimeFormatter format =
-            DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        long days = ChronoUnit.DAYS.between(start, end);
 
-        System.out.println(date.format(format));
+        System.out.println(days);
     }
 }
