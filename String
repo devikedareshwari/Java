@@ -2,12 +2,13 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        Map<Integer, String> students = new TreeMap<>();
+        Map<String, Integer> marks = new HashMap<>();
 
-        students.put(103, "Ravi");
-        students.put(101, "Anu");
-        students.put(102, "Kiran");
+        marks.put("Anu", 70);
+        marks.put("Ravi", 80);
 
-        System.out.println(students);
+        marks.computeIfPresent("Anu", (key, value) -> value + 10);
+
+        System.out.println(marks.get("Anu"));
     }
 }
