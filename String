@@ -1,12 +1,13 @@
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        AtomicInteger count = new AtomicInteger(5);
+        Map<Integer, String> students = new TreeMap<>();
 
-        count.incrementAndGet();
-        count.addAndGet(10);
+        students.put(103, "Ravi");
+        students.put(101, "Anu");
+        students.put(102, "Kiran");
 
-        System.out.println(count.get());
+        System.out.println(students);
     }
 }
