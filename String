@@ -1,16 +1,12 @@
+import java.util.concurrent.atomic.AtomicInteger;
+
 class Main {
-    public static void main(String[] args)
-            throws InterruptedException {
+    public static void main(String[] args) {
+        AtomicInteger count = new AtomicInteger(5);
 
-        Thread t = new Thread(() -> {
-            for (int i = 1; i <= 3; i++) {
-                System.out.println("Task " + i);
-            }
-        });
+        count.incrementAndGet();
+        count.addAndGet(10);
 
-        t.start();
-        t.join();
-
-        System.out.println("Finished");
+        System.out.println(count.get());
     }
 }
