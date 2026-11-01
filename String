@@ -1,22 +1,21 @@
-import java.util.*;
-
 class Main {
-    public static void main(String[] args) {
-        int[] arr = {12, 45, 7, 89, 34, 67};
+    static int search(int[] arr, int left, int right, int target) {
+        if (left > right) return -1;
 
-        PriorityQueue<Integer> heap = new PriorityQueue<>();
+        int mid = left + (right - left) / 2;
 
-        for (int n : arr) {
-            heap.offer(n);
+        if (arr[mid] == target) return mid;
 
-            if (heap.size() > 3) {
-                heap.poll();
-            }
+        if (arr[mid] < target) {
+            return search(arr, mid + 1, right, target);
         }
 
-        List<Integer> result = new ArrayList<>(heap);
-        result.sort(Collections.reverseOrder());
+        return search(arr, left, mid - 1, target);
+    }
 
-        System.out.println(result);
+    public static void main(String[] args) {
+        int[] arr = {2, 4, 6, 8, 10};
+
+        System.out.println(search(arr, 0, arr.length - 1, 8));
     }
 }
