@@ -1,21 +1,15 @@
 class Main {
-    static int search(int[] arr, int left, int right, int target) {
-        if (left > right) return -1;
+    public static void main(String[] args) {
+        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 
-        int mid = left + (right - left) / 2;
+        int current = arr[0];
+        int best = arr[0];
 
-        if (arr[mid] == target) return mid;
-
-        if (arr[mid] < target) {
-            return search(arr, mid + 1, right, target);
+        for (int i = 1; i < arr.length; i++) {
+            current = Math.max(arr[i], current + arr[i]);
+            best = Math.max(best, current);
         }
 
-        return search(arr, left, mid - 1, target);
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {2, 4, 6, 8, 10};
-
-        System.out.println(search(arr, 0, arr.length - 1, 8));
+        System.out.println(best);
     }
 }
