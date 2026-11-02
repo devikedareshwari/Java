@@ -1,31 +1,27 @@
 import java.util.*;
 
+class Product {
+    String name;
+    int price;
+
+    Product(String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
+}
+
 class Main {
     public static void main(String[] args) {
-        int[][] graph = {
-            {1, 2},
-            {0, 3},
-            {0, 3},
-            {1, 2}
-        };
+        List<Product> products = new ArrayList<>();
 
-        int[] dist = {-1, -1, -1, -1};
-        Queue<Integer> q = new ArrayDeque<>();
+        products.add(new Product("Book", 200));
+        products.add(new Product("Pen", 20));
+        products.add(new Product("Bag", 500));
 
-        q.offer(0);
-        dist[0] = 0;
+        products.sort(Comparator.comparingInt(p -> p.price));
 
-        while (!q.isEmpty()) {
-            int node = q.poll();
-
-            for (int next : graph[node]) {
-                if (dist[next] == -1) {
-                    dist[next] = dist[node] + 1;
-                    q.offer(next);
-                }
-            }
+        for (Product p : products) {
+            System.out.println(p.name + ": " + p.price);
         }
-
-        System.out.println(Arrays.toString(dist));
     }
 }
