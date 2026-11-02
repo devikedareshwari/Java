@@ -1,11 +1,11 @@
-record Employee(int id, String name) {}
-
 class Main {
-    public static void main(String[] args) {
-        Employee e = new Employee(101, "Arun");
+    static <T> void display(T value) {
+        System.out.println(value);
+    }
 
-        System.out.println(e.id());
-        System.out.println(e.name());
-        System.out.println(e);
+    public static void main(String[] args) {
+        display(100);
+        display("Java");
+        display(3.14);
     }
 }
