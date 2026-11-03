@@ -2,30 +2,18 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        int[][] graph = {
-            {1, 2},
-            {0, 3},
-            {0, 3},
-            {1, 2}
-        };
+        int[] a = {1, 2, 3, 4};
+        int[] b = {3, 4, 5, 6};
 
-        int[] dist = {-1, -1, -1, -1};
-        Queue<Integer> q = new ArrayDeque<>();
+        Set<Integer> first = new HashSet<>();
+        Set<Integer> result = new TreeSet<>();
 
-        q.offer(0);
-        dist[0] = 0;
+        for (int x : a) first.add(x);
 
-        while (!q.isEmpty()) {
-            int node = q.poll();
-
-            for (int next : graph[node]) {
-                if (dist[next] == -1) {
-                    dist[next] = dist[node] + 1;
-                    q.offer(next);
-                }
-            }
+        for (int x : b) {
+            if (first.contains(x)) result.add(x);
         }
 
-        System.out.println(Arrays.toString(dist));
+        System.out.println(result);
     }
 }
