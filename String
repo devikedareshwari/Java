@@ -1,17 +1,15 @@
-enum Day {
-    MONDAY, TUESDAY, WEDNESDAY
-}
-
 class Main {
     public static void main(String[] args) {
-        Day day = Day.MONDAY;
+        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 
-        String type = switch (day) {
-            case MONDAY -> "Start of week";
-            case TUESDAY -> "Second day";
-            case WEDNESDAY -> "Middle of these days";
-        };
+        int current = arr[0];
+        int best = arr[0];
 
-        System.out.println(type);
+        for (int i = 1; i < arr.length; i++) {
+            current = Math.max(arr[i], current + arr[i]);
+            best = Math.max(best, current);
+        }
+
+        System.out.println(best);
     }
 }
