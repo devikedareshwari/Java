@@ -1,15 +1,31 @@
+import java.util.*;
+
 class Main {
     public static void main(String[] args) {
-        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        int[][] graph = {
+            {1, 2},
+            {0, 3},
+            {0, 3},
+            {1, 2}
+        };
 
-        int current = arr[0];
-        int best = arr[0];
+        int[] dist = {-1, -1, -1, -1};
+        Queue<Integer> q = new ArrayDeque<>();
 
-        for (int i = 1; i < arr.length; i++) {
-            current = Math.max(arr[i], current + arr[i]);
-            best = Math.max(best, current);
+        q.offer(0);
+        dist[0] = 0;
+
+        while (!q.isEmpty()) {
+            int node = q.poll();
+
+            for (int next : graph[node]) {
+                if (dist[next] == -1) {
+                    dist[next] = dist[node] + 1;
+                    q.offer(next);
+                }
+            }
         }
 
-        System.out.println(best);
+        System.out.println(Arrays.toString(dist));
     }
 }
