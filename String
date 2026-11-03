@@ -1,19 +1,10 @@
-import java.util.*;
+import java.math.BigInteger;
 
 class Main {
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 4};
-        int[] b = {3, 4, 5, 6};
+        BigInteger a = new BigInteger("99999999999999999999");
+        BigInteger b = new BigInteger("88888888888888888888");
 
-        Set<Integer> first = new HashSet<>();
-        Set<Integer> result = new TreeSet<>();
-
-        for (int x : a) first.add(x);
-
-        for (int x : b) {
-            if (first.contains(x)) result.add(x);
-        }
-
-        System.out.println(result);
+        System.out.println(a.add(b));
     }
 }
