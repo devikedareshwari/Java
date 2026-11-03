@@ -2,34 +2,30 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        int n = 4;
-        int[][] edges = {{0, 2}, {1, 2}, {2, 3}};
+        int[][] graph = {
+            {1, 2},
+            {0, 3},
+            {0, 3},
+            {1, 2}
+        };
 
-        List<List<Integer>> graph = new ArrayList<>();
-        int[] indegree = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            graph.add(new ArrayList<>());
-        }
-
-        for (int[] edge : edges) {
-            graph.get(edge[0]).add(edge[1]);
-            indegree[edge[1]]++;
-        }
-
+        int[] dist = {-1, -1, -1, -1};
         Queue<Integer> q = new ArrayDeque<>();
 
-        for (int i = 0; i < n; i++) {
-            if (indegree[i] == 0) q.offer(i);
-        }
+        q.offer(0);
+        dist[0] = 0;
 
         while (!q.isEmpty()) {
             int node = q.poll();
-            System.out.print(node + " ");
 
-            for (int next : graph.get(node)) {
-                if (--indegree[next] == 0) q.offer(next);
+            for (int next : graph[node]) {
+                if (dist[next] == -1) {
+                    dist[next] = dist[node] + 1;
+                    q.offer(next);
+                }
             }
         }
+
+        System.out.println(Arrays.toString(dist));
     }
 }
