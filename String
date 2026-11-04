@@ -1,14 +1,35 @@
+import java.util.*;
+
 class Main {
     public static void main(String[] args) {
-        int n = 5;
-        int prev2 = 1, prev1 = 1;
+        int n = 4;
+        int[][] edges = {{0, 2}, {1, 2}, {2, 3}};
 
-        for (int i = 2; i <= n; i++) {
-            int current = prev1 + prev2;
-            prev2 = prev1;
-            prev1 = current;
+        List<List<Integer>> graph = new ArrayList<>();
+        int[] indegree = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            graph.add(new ArrayList<>());
         }
 
-        System.out.println(prev1);
+        for (int[] edge : edges) {
+            graph.get(edge[0]).add(edge[1]);
+            indegree[edge[1]]++;
+        }
+
+        Queue<Integer> q = new ArrayDeque<>();
+
+        for (int i = 0; i < n; i++) {
+            if (indegree[i] == 0) q.offer(i);
+        }
+
+        while (!q.isEmpty()) {
+            int node = q.poll();
+            System.out.print(node + " ");
+
+            for (int next : graph.get(node)) {
+                if (--indegree[next] == 0) q.offer(next);
+            }
+        }
     }
 }
