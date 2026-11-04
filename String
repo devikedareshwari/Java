@@ -1,35 +1,15 @@
-import java.util.*;
-
 class Main {
     public static void main(String[] args) {
-        int n = 4;
-        int[][] edges = {{0, 2}, {1, 2}, {2, 3}};
+        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 
-        List<List<Integer>> graph = new ArrayList<>();
-        int[] indegree = new int[n];
+        int current = arr[0];
+        int best = arr[0];
 
-        for (int i = 0; i < n; i++) {
-            graph.add(new ArrayList<>());
+        for (int i = 1; i < arr.length; i++) {
+            current = Math.max(arr[i], current + arr[i]);
+            best = Math.max(best, current);
         }
 
-        for (int[] edge : edges) {
-            graph.get(edge[0]).add(edge[1]);
-            indegree[edge[1]]++;
-        }
-
-        Queue<Integer> q = new ArrayDeque<>();
-
-        for (int i = 0; i < n; i++) {
-            if (indegree[i] == 0) q.offer(i);
-        }
-
-        while (!q.isEmpty()) {
-            int node = q.poll();
-            System.out.print(node + " ");
-
-            for (int next : graph.get(node)) {
-                if (--indegree[next] == 0) q.offer(next);
-            }
-        }
+        System.out.println(best);
     }
 }
