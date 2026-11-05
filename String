@@ -1,16 +1,16 @@
+import java.util.*;
+
 class Main {
-    public static void main(String[] args)
-            throws InterruptedException {
+    public static void main(String[] args) {
+        String[] words = {"apple", "banana", "apple", "orange", "banana"};
 
-        Thread t = new Thread(() -> {
-            for (int i = 1; i <= 3; i++) {
-                System.out.println("Task " + i);
-            }
-        });
+        Map<String, Integer> map = new HashMap<>();
 
-        t.start();
-        t.join();
+        for (String word : words) {
+            map.computeIfAbsent(word, k -> 0);
+            map.put(word, map.get(word) + 1);
+        }
 
-        System.out.println("Finished");
+        System.out.println(map);
     }
 }
