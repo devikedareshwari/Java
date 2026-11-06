@@ -1,16 +1,15 @@
-import java.util.*;
-
 class Main {
     public static void main(String[] args) {
-        String a = "listen";
-        String b = "silent";
+        String[] words = {"flower", "flow", "flight"};
 
-        char[] x = a.toCharArray();
-        char[] y = b.toCharArray();
+        String prefix = words[0];
 
-        Arrays.sort(x);
-        Arrays.sort(y);
+        for (int i = 1; i < words.length; i++) {
+            while (!words[i].startsWith(prefix)) {
+                prefix = prefix.substring(0, prefix.length() - 1);
+            }
+        }
 
-        System.out.println(Arrays.equals(x, y));
+        System.out.println(prefix);
     }
 }
