@@ -1,3 +1,16 @@
-UUID id = UUID.randomUUID();
+class Parent {
+    final void display() {
+        System.out.println("Final method");
+    }
+}
 
-System.out.println(id);
+class Child extends Parent {
+    // display() cannot be overridden here
+}
+
+class Main {
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.display();
+    }
+}
