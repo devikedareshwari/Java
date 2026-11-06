@@ -1,15 +1,16 @@
-abstract class Greeting {
-    abstract void sayHello();
-}
+import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        Greeting g = new Greeting() {
-            void sayHello() {
-                System.out.println("Hello Java!");
-            }
-        };
+        String a = "listen";
+        String b = "silent";
 
-        g.sayHello();
+        char[] x = a.toCharArray();
+        char[] y = b.toCharArray();
+
+        Arrays.sort(x);
+        Arrays.sort(y);
+
+        System.out.println(Arrays.equals(x, y));
     }
 }
