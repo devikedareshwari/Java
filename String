@@ -2,14 +2,11 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        Map<String, Integer> map = new IdentityHashMap<>();
+        List<Integer> numbers =
+            Arrays.asList(1, 2, 2, 3, 2, 4);
 
-        String a = new String("Java");
-        String b = new String("Java");
+        int count = Collections.frequency(numbers, 2);
 
-        map.put(a, 10);
-        map.put(b, 20);
-
-        System.out.println(map.size());
+        System.out.println(count);
     }
 }
