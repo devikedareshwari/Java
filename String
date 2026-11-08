@@ -1,10 +1,26 @@
-import java.util.*;
-
 class Main {
     public static void main(String[] args) {
-        List<Integer> a = Arrays.asList(1, 2, 3);
-        List<Integer> b = Arrays.asList(4, 5, 6);
+        int[] arr = {2, 2, 1, 2, 3, 2, 2};
 
-        System.out.println(Collections.disjoint(a, b));
+        int candidate = 0, count = 0;
+
+        for (int n : arr) {
+            if (count == 0) {
+                candidate = n;
+            }
+
+            count += (n == candidate) ? 1 : -1;
+        }
+
+        count = 0;
+        for (int n : arr) {
+            if (n == candidate) count++;
+        }
+
+        if (count > arr.length / 2) {
+            System.out.println(candidate);
+        } else {
+            System.out.println("No majority element");
+        }
     }
 }
