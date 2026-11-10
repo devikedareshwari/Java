@@ -1,24 +1,25 @@
-class Student {
-    String name;
-    int age;
+interface Payment {
+    void pay(int amount);
+}
 
-    Student() {
-        this("Unknown", 18);
+class Upi implements Payment {
+    public void pay(int amount) {
+        System.out.println("UPI payment: " + amount);
     }
+}
 
-    Student(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    void display() {
-        System.out.println(name + " " + age);
+class Card implements Payment {
+    public void pay(int amount) {
+        System.out.println("Card payment: " + amount);
     }
 }
 
 class Main {
     public static void main(String[] args) {
-        Student s = new Student();
-        s.display();
+        Payment p = new Upi();
+        p.pay(500);
+
+        p = new Card();
+        p.pay(1000);
     }
 }
