@@ -1,23 +1,19 @@
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
 class Main {
     public static void main(String[] args) {
-        int[] arr = {1, 3, 5, 2, 2};
-
-        int total = 0;
-        for (int n : arr) total += n;
-
-        int leftSum = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-            total -= arr[i];
-
-            if (leftSum == total) {
-                System.out.println(i);
-                return;
-            }
-
-            leftSum += arr[i];
-        }
-
-        System.out.println(-1);
+        Animal a = new Dog();
+        a.sound();
     }
 }
