@@ -1,15 +1,16 @@
-abstract class Greeting {
-    abstract void sayHello();
+class Parent {
+    final void display() {
+        System.out.println("Final method");
+    }
+}
+
+class Child extends Parent {
+    // display() cannot be overridden here
 }
 
 class Main {
     public static void main(String[] args) {
-        Greeting g = new Greeting() {
-            void sayHello() {
-                System.out.println("Hello Java!");
-            }
-        };
-
-        g.sayHello();
+        Child c = new Child();
+        c.display();
     }
 }
