@@ -1,16 +1,16 @@
-class Parent {
-    final void display() {
-        System.out.println("Final method");
-    }
-}
-
-class Child extends Parent {
-    // display() cannot be overridden here
-}
+import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        Child c = new Child();
-        c.display();
+        String a = "listen";
+        String b = "silent";
+
+        char[] x = a.toCharArray();
+        char[] y = b.toCharArray();
+
+        Arrays.sort(x);
+        Arrays.sort(y);
+
+        System.out.println(Arrays.equals(x, y));
     }
 }
