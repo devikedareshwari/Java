@@ -1,14 +1,15 @@
 import java.util.*;
 
-enum Color {
-    RED, GREEN, BLUE, YELLOW
-}
-
 class Main {
     public static void main(String[] args) {
-        EnumSet<Color> colors =
-            EnumSet.of(Color.RED, Color.BLUE);
+        Map<String, Integer> map = new IdentityHashMap<>();
 
-        System.out.println(colors);
+        String a = new String("Java");
+        String b = new String("Java");
+
+        map.put(a, 10);
+        map.put(b, 20);
+
+        System.out.println(map.size());
     }
 }
