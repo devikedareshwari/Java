@@ -1,14 +1,14 @@
 import java.util.*;
 
+enum Color {
+    RED, GREEN, BLUE, YELLOW
+}
+
 class Main {
     public static void main(String[] args) {
-        BitSet bits = new BitSet();
+        EnumSet<Color> colors =
+            EnumSet.of(Color.RED, Color.BLUE);
 
-        bits.set(1);
-        bits.set(3);
-        bits.set(5);
-
-        System.out.println(bits);
-        System.out.println(bits.get(3));
+        System.out.println(colors);
     }
 }
