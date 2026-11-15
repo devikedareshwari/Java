@@ -2,10 +2,13 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        Optional<String> name = Optional.empty();
+        List<Integer> numbers =
+            Arrays.asList(1, 2, 3, 4, 5);
 
-        String result = name.orElseGet(() -> "Guest");
+        int sum = numbers.parallelStream()
+                         .mapToInt(Integer::intValue)
+                         .sum();
 
-        System.out.println(result);
+        System.out.println(sum);
     }
 }
