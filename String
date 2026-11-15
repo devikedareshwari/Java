@@ -1,24 +1,24 @@
-import java.lang.reflect.*;
-
-class Student {
-    String name;
-    int age;
-
-    void display() {}
-}
+import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        Class<?> c = Student.class;
+        int[] arr = {10, 9, 2, 5, 3, 7, 101, 18};
 
-        System.out.println("Class: " + c.getSimpleName());
+        int[] dp = new int[arr.length];
+        Arrays.fill(dp, 1);
 
-        for (Field field : c.getDeclaredFields()) {
-            System.out.println(field.getName());
+        int answer = 1;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] < arr[i]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
+
+            answer = Math.max(answer, dp[i]);
         }
 
-        for (Method method : c.getDeclaredMethods()) {
-            System.out.println(method.getName());
-        }
+        System.out.println(answer);
     }
 }
