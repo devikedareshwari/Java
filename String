@@ -1,14 +1,24 @@
-import java.util.*;
+import java.lang.reflect.*;
+
+class Student {
+    String name;
+    int age;
+
+    void display() {}
+}
 
 class Main {
     public static void main(String[] args) {
-        List<Integer> numbers =
-            Arrays.asList(1, 2, 3, 4, 5);
+        Class<?> c = Student.class;
 
-        int sum = numbers.parallelStream()
-                         .mapToInt(Integer::intValue)
-                         .sum();
+        System.out.println("Class: " + c.getSimpleName());
 
-        System.out.println(sum);
+        for (Field field : c.getDeclaredFields()) {
+            System.out.println(field.getName());
+        }
+
+        for (Method method : c.getDeclaredMethods()) {
+            System.out.println(method.getName());
+        }
     }
 }
