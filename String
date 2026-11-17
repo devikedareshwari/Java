@@ -1,19 +1,24 @@
-class Animal {
-    void sound() {
-        System.out.println("Animal makes a sound");
-    }
-}
+class Student {
+    String name;
+    int age;
 
-class Dog extends Animal {
-    @Override
-    void sound() {
-        System.out.println("Dog barks");
+    Student() {
+        this("Unknown", 18);
+    }
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void display() {
+        System.out.println(name + " " + age);
     }
 }
 
 class Main {
     public static void main(String[] args) {
-        Animal a = new Dog();
-        a.sound();
+        Student s = new Student();
+        s.display();
     }
 }
