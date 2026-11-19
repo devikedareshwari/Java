@@ -1,27 +1,12 @@
 import java.util.*;
 
-class LRUCache<K, V> extends LinkedHashMap<K, V> {
-    private final int capacity;
-
-    LRUCache(int capacity) {
-        super(capacity, 0.75f, true);
-        this.capacity = capacity;
-    }
-
-    protected boolean removeEldestEntry(Map.Entry<K, V> entry) {
-        return size() > capacity;
-    }
-}
-
 class Main {
     public static void main(String[] args) {
-        LRUCache<Integer, String> cache = new LRUCache<>(2);
+        List<Integer> numbers =
+            Arrays.asList(10, 20, 30, 40);
 
-        cache.put(1, "A");
-        cache.put(2, "B");
-        cache.get(1);
-        cache.put(3, "C");
+        Spliterator<Integer> sp = numbers.spliterator();
 
-        System.out.println(cache);
+        sp.forEachRemaining(System.out::println);
     }
 }
