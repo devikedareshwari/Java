@@ -1,13 +1,16 @@
-import java.util.*;
+import java.util.concurrent.*;
 
 class Main {
     public static void main(String[] args) {
-        WeakHashMap<String, Integer> map = new WeakHashMap<>();
+        CopyOnWriteArrayList<String> list =
+            new CopyOnWriteArrayList<>();
 
-        String key = new String("Java");
-        map.put(key, 100);
+        list.add("Java");
+        list.add("Python");
+        list.add("C++");
 
-        System.out.println(map.get(key));
-        System.out.println(map.size());
+        for (String language : list) {
+            System.out.println(language);
+        }
     }
 }
