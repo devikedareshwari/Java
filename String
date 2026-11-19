@@ -2,34 +2,12 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        int n = 4;
-        int[][] edges = {{0, 2}, {1, 2}, {2, 3}};
+        WeakHashMap<String, Integer> map = new WeakHashMap<>();
 
-        List<List<Integer>> graph = new ArrayList<>();
-        int[] indegree = new int[n];
+        String key = new String("Java");
+        map.put(key, 100);
 
-        for (int i = 0; i < n; i++) {
-            graph.add(new ArrayList<>());
-        }
-
-        for (int[] edge : edges) {
-            graph.get(edge[0]).add(edge[1]);
-            indegree[edge[1]]++;
-        }
-
-        Queue<Integer> q = new ArrayDeque<>();
-
-        for (int i = 0; i < n; i++) {
-            if (indegree[i] == 0) q.offer(i);
-        }
-
-        while (!q.isEmpty()) {
-            int node = q.poll();
-            System.out.print(node + " ");
-
-            for (int next : graph.get(node)) {
-                if (--indegree[next] == 0) q.offer(next);
-            }
-        }
+        System.out.println(map.get(key));
+        System.out.println(map.size());
     }
 }
