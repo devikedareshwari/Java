@@ -1,34 +1,39 @@
-interface Vehicle {
-    void drive();
-}
+class Laptop {
+    String brand;
+    int ram;
 
-class Car implements Vehicle {
-    public void drive() {
-        System.out.println("Driving car");
+    Laptop(String brand, int ram) {
+        this.brand = brand;
+        this.ram = ram;
     }
-}
 
-class Bike implements Vehicle {
-    public void drive() {
-        System.out.println("Riding bike");
-    }
-}
+    static class Builder {
+        String brand;
+        int ram;
 
-class VehicleFactory {
-    static Vehicle create(String type) {
-        if (type.equalsIgnoreCase("car"))
-            return new Car();
+        Builder setBrand(String brand) {
+            this.brand = brand;
+            return this;
+        }
 
-        if (type.equalsIgnoreCase("bike"))
-            return new Bike();
+        Builder setRam(int ram) {
+            this.ram = ram;
+            return this;
+        }
 
-        throw new IllegalArgumentException("Unknown vehicle");
+        Laptop build() {
+            return new Laptop(brand, ram);
+        }
     }
 }
 
 class Main {
     public static void main(String[] args) {
-        Vehicle v = VehicleFactory.create("car");
-        v.drive();
+        Laptop laptop = new Laptop.Builder()
+            .setBrand("Dell")
+            .setRam(16)
+            .build();
+
+        System.out.println(laptop.brand + " " + laptop.ram + "GB");
     }
 }
