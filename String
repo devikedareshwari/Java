@@ -1,34 +1,25 @@
-import java.util.*;
-
-interface Observer {
-    void update(String message);
+interface Payment {
+    void pay(int amount);
 }
 
-class User implements Observer {
-    public void update(String message) {
-        System.out.println(message);
+class Cash implements Payment {
+    public void pay(int amount) {
+        System.out.println("Cash: " + amount);
     }
 }
 
-class Channel {
-    List<Observer> users = new ArrayList<>();
-
-    void subscribe(Observer user) {
-        users.add(user);
-    }
-
-    void notifyUsers(String message) {
-        for (Observer user : users) {
-            user.update(message);
-        }
+class UPI implements Payment {
+    public void pay(int amount) {
+        System.out.println("UPI: " + amount);
     }
 }
 
 class Main {
     public static void main(String[] args) {
-        Channel channel = new Channel();
-        channel.subscribe(new User());
+        Payment payment = new UPI();
+        payment.pay(500);
 
-        channel.notifyUsers("New video uploaded!");
+        payment = new Cash();
+        payment.pay(200);
     }
 }
