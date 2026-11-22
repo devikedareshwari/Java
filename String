@@ -2,21 +2,25 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        int[] coins = {1, 2, 5};
-        int amount = 11;
+        int[] a = {1, 3};
+        int[] b = {2, 4};
 
-        int[] dp = new int[amount + 1];
-        Arrays.fill(dp, amount + 1);
-        dp[0] = 0;
+        int[] merged = new int[a.length + b.length];
 
-        for (int i = 1; i <= amount; i++) {
-            for (int coin : coins) {
-                if (coin <= i) {
-                    dp[i] = Math.min(dp[i], dp[i - coin] + 1);
-                }
-            }
+        System.arraycopy(a, 0, merged, 0, a.length);
+        System.arraycopy(b, 0, merged, a.length, b.length);
+
+        Arrays.sort(merged);
+
+        int n = merged.length;
+        double median;
+
+        if (n % 2 == 0) {
+            median = ((double) merged[n / 2 - 1] + merged[n / 2]) / 2;
+        } else {
+            median = merged[n / 2];
         }
 
-        System.out.println(dp[amount] > amount ? -1 : dp[amount]);
+        System.out.println(median);
     }
 }
