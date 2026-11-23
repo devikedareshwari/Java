@@ -1,13 +1,13 @@
-import java.util.function.*;
-
 class Main {
     public static void main(String[] args) {
-        IntBinaryOperator add = (a, b) -> a + b;
-        IntBinaryOperator subtract = (a, b) -> a - b;
-        IntBinaryOperator multiply = (a, b) -> a * b;
+        String username = "admin";
+        String password = "java123";
 
-        System.out.println(add.applyAsInt(10, 5));
-        System.out.println(subtract.applyAsInt(10, 5));
-        System.out.println(multiply.applyAsInt(10, 5));
+        if (username.equals("admin") &&
+            password.equals("java123")) {
+            System.out.println("Login successful");
+        } else {
+            System.out.println("Invalid credentials");
+        }
     }
 }
