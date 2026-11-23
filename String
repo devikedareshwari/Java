@@ -1,13 +1,11 @@
+import java.security.SecureRandom;
+
 class Main {
     public static void main(String[] args) {
-        String username = "admin";
-        String password = "java123";
+        SecureRandom random = new SecureRandom();
 
-        if (username.equals("admin") &&
-            password.equals("java123")) {
-            System.out.println("Login successful");
-        } else {
-            System.out.println("Invalid credentials");
-        }
+        int otp = 100000 + random.nextInt(900000);
+
+        System.out.println("OTP: " + otp);
     }
 }
