@@ -1,28 +1,21 @@
-class BankAccount {
-    private double balance;
-
-    void deposit(double amount) {
-        if (amount > 0) balance += amount;
-    }
-
-    void withdraw(double amount) {
-        if (amount > 0 && amount <= balance) {
-            balance -= amount;
-        }
-    }
-
-    double getBalance() {
-        return balance;
-    }
-}
+import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        BankAccount account = new BankAccount();
+        Set<String> books = new HashSet<>();
 
-        account.deposit(5000);
-        account.withdraw(1000);
+        books.add("Java");
+        books.add("Python");
+        books.add("C++");
 
-        System.out.println(account.getBalance());
+        String requested = "Java";
+
+        if (books.remove(requested)) {
+            System.out.println("Book issued: " + requested);
+        } else {
+            System.out.println("Book unavailable");
+        }
+
+        System.out.println("Remaining books: " + books);
     }
 }
