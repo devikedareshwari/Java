@@ -1,11 +1,28 @@
-import java.security.SecureRandom;
+class BankAccount {
+    private double balance;
+
+    void deposit(double amount) {
+        if (amount > 0) balance += amount;
+    }
+
+    void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
+
+    double getBalance() {
+        return balance;
+    }
+}
 
 class Main {
     public static void main(String[] args) {
-        SecureRandom random = new SecureRandom();
+        BankAccount account = new BankAccount();
 
-        int otp = 100000 + random.nextInt(900000);
+        account.deposit(5000);
+        account.withdraw(1000);
 
-        System.out.println("OTP: " + otp);
+        System.out.println(account.getBalance());
     }
 }
