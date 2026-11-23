@@ -1,27 +1,13 @@
-import java.util.*;
+import java.util.function.*;
 
 class Main {
     public static void main(String[] args) {
-        int[] heights = {2, 1, 5, 6, 2, 3};
-VS
-        Stack<Integer> stack = new Stack<>();
-        int maxArea = 0;
+        IntBinaryOperator add = (a, b) -> a + b;
+        IntBinaryOperator subtract = (a, b) -> a - b;
+        IntBinaryOperator multiply = (a, b) -> a * b;
 
-        for (int i = 0; i <= heights.length; i++) {
-            int current = (i == heights.length) ? 0 : heights[i];
-
-            while (!stack.isEmpty() &&
-                   heights[stack.peek()] > current) {
-                int height = heights[stack.pop()];
-                int width = stack.isEmpty()
-                    ? i : i - stack.peek() - 1;
-
-                maxArea = Math.max(maxArea, height * width);
-            }
-
-            stack.push(i);
-        }
-
-        System.out.println(maxArea);
+        System.out.println(add.applyAsInt(10, 5));
+        System.out.println(subtract.applyAsInt(10, 5));
+        System.out.println(multiply.applyAsInt(10, 5));
     }
 }
