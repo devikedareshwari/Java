@@ -1,21 +1,16 @@
-import java.util.*;
+class Student {
+    int id = 101;
+    String name = "Ravi";
+
+    String toJson() {
+        return "{\"id\":" + id +
+               ",\"name\":\"" + name + "\"}";
+    }
+}
 
 class Main {
     public static void main(String[] args) {
-        Set<String> books = new HashSet<>();
-
-        books.add("Java");
-        books.add("Python");
-        books.add("C++");
-
-        String requested = "Java";
-
-        if (books.remove(requested)) {
-            System.out.println("Book issued: " + requested);
-        } else {
-            System.out.println("Book unavailable");
-        }
-
-        System.out.println("Remaining books: " + books);
+        Student s = new Student();
+        System.out.println(s.toJson());
     }
 }
