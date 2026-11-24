@@ -1,16 +1,11 @@
-class Student {
-    int id = 101;
-    String name = "Ravi";
-
-    String toJson() {
-        return "{\"id\":" + id +
-               ",\"name\":\"" + name + "\"}";
-    }
-}
+import java.nio.file.*;
 
 class Main {
-    public static void main(String[] args) {
-        Student s = new Student();
-        System.out.println(s.toJson());
+    public static void main(String[] args) throws Exception {
+        Path file = Path.of("message.txt");
+
+        Files.writeString(file, "Welcome to Java programming!");
+
+        System.out.println("File created successfully");
     }
 }
