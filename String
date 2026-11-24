@@ -1,19 +1,18 @@
-import java.net.URI;
-import java.net.http.*;
+import java.sql.*;
 
 class Main {
-    public static void main(String[] args) throws Exception {
-        HttpClient client = HttpClient.newHttpClient();
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/college";
+        String user = "root";
+        String password = "your_password";
 
-        HttpRequest request = HttpRequest.newBuilder()
-            .uri(URI.create("https://example.com"))
-            .GET()
-            .build();
+        try (Connection con =
+                 DriverManager.getConnection(url, user, password)) {
 
-        HttpResponse<String> response =
-            client.send(request,
-                HttpResponse.BodyHandlers.ofString());
+            System.out.println("Database connected!");
 
-        System.out.println("Status: " + response.statusCode());
+        } catch (SQLException e) {
+            System.out.println("Connection failed");
+        }
     }
 }
