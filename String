@@ -1,11 +1,23 @@
-class VehicleFactory {
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 5, 2, 2};
 
-    static Vehicle create(String type) {
+        int total = 0;
+        for (int n : arr) total += n;
 
-        if (type.equals("car")) {
-            return new Car();
+        int leftSum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            total -= arr[i];
+
+            if (leftSum == total) {
+                System.out.println(i);
+                return;
+            }
+
+            leftSum += arr[i];
         }
 
-        return new Bike();
+        System.out.println(-1);
     }
 }
