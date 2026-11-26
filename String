@@ -1,31 +1,21 @@
-import java.util.*;
-
 class Main {
-    public static void main(String[] args) {
-        int[][] graph = {
-            {1, 2},
-            {0, 3},
-            {0, 3},
-            {1, 2}
-        };
+    static int search(int[] arr, int left, int right, int target) {
+        if (left > right) return -1;
 
-        int[] dist = {-1, -1, -1, -1};
-        Queue<Integer> q = new ArrayDeque<>();
+        int mid = left + (right - left) / 2;
 
-        q.offer(0);
-        dist[0] = 0;
+        if (arr[mid] == target) return mid;
 
-        while (!q.isEmpty()) {
-            int node = q.poll();
-
-            for (int next : graph[node]) {
-                if (dist[next] == -1) {
-                    dist[next] = dist[node] + 1;
-                    q.offer(next);
-                }
-            }
+        if (arr[mid] < target) {
+            return search(arr, mid + 1, right, target);
         }
 
-        System.out.println(Arrays.toString(dist));
+        return search(arr, left, mid - 1, target);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {2, 4, 6, 8, 10};
+
+        System.out.println(search(arr, 0, arr.length - 1, 8));
     }
 }
