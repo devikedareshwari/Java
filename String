@@ -1,11 +1,27 @@
-record Employee(int id, String name) {}
+import java.util.*;
+
+class Product {
+    String name;
+    int price;
+
+    Product(String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
+}
 
 class Main {
     public static void main(String[] args) {
-        Employee e = new Employee(101, "Arun");
+        List<Product> products = new ArrayList<>();
 
-        System.out.println(e.id());
-        System.out.println(e.name());
-        System.out.println(e);
+        products.add(new Product("Book", 200));
+        products.add(new Product("Pen", 20));
+        products.add(new Product("Bag", 500));
+
+        products.sort(Comparator.comparingInt(p -> p.price));
+
+        for (Product p : products) {
+            System.out.println(p.name + ": " + p.price);
+        }
     }
 }
