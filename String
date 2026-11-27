@@ -1,27 +1,15 @@
-import java.util.*;
-
-class Product {
-    String name;
-    int price;
-
-    Product(String name, int price) {
-        this.name = name;
-        this.price = price;
-    }
-}
-
 class Main {
     public static void main(String[] args) {
-        List<Product> products = new ArrayList<>();
+        int[] arr = {1, 2, 3, 5, 6};
+        int n = 6;
 
-        products.add(new Product("Book", 200));
-        products.add(new Product("Pen", 20));
-        products.add(new Product("Bag", 500));
+        int expected = n * (n + 1) / 2;
+        int actual = 0;
 
-        products.sort(Comparator.comparingInt(p -> p.price));
-
-        for (Product p : products) {
-            System.out.println(p.name + ": " + p.price);
+        for (int x : arr) {
+            actual += x;
         }
+
+        System.out.println("Missing: " + (expected - actual));
     }
 }
