@@ -1,15 +1,11 @@
-import java.util.*;
+record Employee(int id, String name) {}
 
 class Main {
     public static void main(String[] args) {
-        Deque<String> stack = new ArrayDeque<>();
+        Employee e = new Employee(101, "Arun");
 
-        stack.push("A");
-        stack.push("B");
-        stack.push("C");
-
-        System.out.println("Top: " + stack.peek());
-        System.out.println("Removed: " + stack.pop());
-        System.out.println(stack);
+        System.out.println(e.id());
+        System.out.println(e.name());
+        System.out.println(e);
     }
 }
