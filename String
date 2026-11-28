@@ -1,6 +1,18 @@
-interface Calculator {
+interface A {
+    void show();
+}
 
-    static int square(int x) {
-        return x * x;
+interface B {
+    void display();
+}
+
+class C implements A, B {
+
+    public void show() {
+        System.out.println("Show");
+    }
+
+    public void display() {
+        System.out.println("Display");
     }
 }
