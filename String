@@ -1,4 +1,5 @@
-public static void main(String[] args) {
+String email = "test@example.com";
 
-    System.out.println(args[0]);
+if (email.matches(".*@.*")) {
+    System.out.println("Valid format");
 }
